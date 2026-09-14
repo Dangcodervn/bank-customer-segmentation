@@ -1,0 +1,59 @@
+table 'Product Co-occurrence'
+	lineageTag: 05203921-158f-4821-95a5-e06b322ccb05
+
+	column 'Product A'
+		lineageTag: af79722c-e689-4bac-9d17-cec518aeab7d
+		isNameInferred
+		sourceColumn: [Product A]
+
+	column 'Product B'
+		lineageTag: 433ae670-f706-456f-a68a-491c2b4cf4c4
+		isNameInferred
+		sourceColumn: [Product B]
+
+	column 'Co-occurrence Count'
+		lineageTag: b7eb94bc-588a-4448-9ab3-34c290ebbd95
+		isNameInferred
+		sourceColumn: [Co-occurrence Count]
+
+	partition 'Product Co-occurrence' = calculated
+		mode: import
+		source =
+				UNION(
+				ROW("Product A", "TK thanh toán", "Product B", "TK thanh toán", "Co-occurrence Count", COUNTROWS(FILTER(prod_holding, prod_holding[TK thanh toán]=1 && prod_holding[TK thanh toán]=1))),
+				ROW("Product A", "TK thanh toán", "Product B", "Tiền gửi có kỳ hạn", "Co-occurrence Count", COUNTROWS(FILTER(prod_holding, prod_holding[TK thanh toán]=1 && prod_holding[Tiền gửi có kỳ hạn]=1))),
+				ROW("Product A", "TK thanh toán", "Product B", "Thẻ tín dụng", "Co-occurrence Count", COUNTROWS(FILTER(prod_holding, prod_holding[TK thanh toán]=1 && prod_holding[Thẻ tín dụng]=1))),
+				ROW("Product A", "TK thanh toán", "Product B", "App ngân hàng", "Co-occurrence Count", COUNTROWS(FILTER(prod_holding, prod_holding[TK thanh toán]=1 && prod_holding[App ngân hàng]=1))),
+				ROW("Product A", "TK thanh toán", "Product B", "Vay thế chấp", "Co-occurrence Count", COUNTROWS(FILTER(prod_holding, prod_holding[TK thanh toán]=1 && prod_holding[Vay thế chấp]=1))),
+				ROW("Product A", "TK thanh toán", "Product B", "Vay tín chấp", "Co-occurrence Count", COUNTROWS(FILTER(prod_holding, prod_holding[TK thanh toán]=1 && prod_holding[Vay tín chấp]=1))),
+				ROW("Product A", "Tiền gửi có kỳ hạn", "Product B", "TK thanh toán", "Co-occurrence Count", COUNTROWS(FILTER(prod_holding, prod_holding[Tiền gửi có kỳ hạn]=1 && prod_holding[TK thanh toán]=1))),
+				ROW("Product A", "Tiền gửi có kỳ hạn", "Product B", "Tiền gửi có kỳ hạn", "Co-occurrence Count", COUNTROWS(FILTER(prod_holding, prod_holding[Tiền gửi có kỳ hạn]=1 && prod_holding[Tiền gửi có kỳ hạn]=1))),
+				ROW("Product A", "Tiền gửi có kỳ hạn", "Product B", "Thẻ tín dụng", "Co-occurrence Count", COUNTROWS(FILTER(prod_holding, prod_holding[Tiền gửi có kỳ hạn]=1 && prod_holding[Thẻ tín dụng]=1))),
+				ROW("Product A", "Tiền gửi có kỳ hạn", "Product B", "App ngân hàng", "Co-occurrence Count", COUNTROWS(FILTER(prod_holding, prod_holding[Tiền gửi có kỳ hạn]=1 && prod_holding[App ngân hàng]=1))),
+				ROW("Product A", "Tiền gửi có kỳ hạn", "Product B", "Vay thế chấp", "Co-occurrence Count", COUNTROWS(FILTER(prod_holding, prod_holding[Tiền gửi có kỳ hạn]=1 && prod_holding[Vay thế chấp]=1))),
+				ROW("Product A", "Tiền gửi có kỳ hạn", "Product B", "Vay tín chấp", "Co-occurrence Count", COUNTROWS(FILTER(prod_holding, prod_holding[Tiền gửi có kỳ hạn]=1 && prod_holding[Vay tín chấp]=1))),
+				ROW("Product A", "Thẻ tín dụng", "Product B", "TK thanh toán", "Co-occurrence Count", COUNTROWS(FILTER(prod_holding, prod_holding[Thẻ tín dụng]=1 && prod_holding[TK thanh toán]=1))),
+				ROW("Product A", "Thẻ tín dụng", "Product B", "Tiền gửi có kỳ hạn", "Co-occurrence Count", COUNTROWS(FILTER(prod_holding, prod_holding[Thẻ tín dụng]=1 && prod_holding[Tiền gửi có kỳ hạn]=1))),
+				ROW("Product A", "Thẻ tín dụng", "Product B", "Thẻ tín dụng", "Co-occurrence Count", COUNTROWS(FILTER(prod_holding, prod_holding[Thẻ tín dụng]=1 && prod_holding[Thẻ tín dụng]=1))),
+				ROW("Product A", "Thẻ tín dụng", "Product B", "App ngân hàng", "Co-occurrence Count", COUNTROWS(FILTER(prod_holding, prod_holding[Thẻ tín dụng]=1 && prod_holding[App ngân hàng]=1))),
+				ROW("Product A", "Thẻ tín dụng", "Product B", "Vay thế chấp", "Co-occurrence Count", COUNTROWS(FILTER(prod_holding, prod_holding[Thẻ tín dụng]=1 && prod_holding[Vay thế chấp]=1))),
+				ROW("Product A", "Thẻ tín dụng", "Product B", "Vay tín chấp", "Co-occurrence Count", COUNTROWS(FILTER(prod_holding, prod_holding[Thẻ tín dụng]=1 && prod_holding[Vay tín chấp]=1))),
+				ROW("Product A", "App ngân hàng", "Product B", "TK thanh toán", "Co-occurrence Count", COUNTROWS(FILTER(prod_holding, prod_holding[App ngân hàng]=1 && prod_holding[TK thanh toán]=1))),
+				ROW("Product A", "App ngân hàng", "Product B", "Tiền gửi có kỳ hạn", "Co-occurrence Count", COUNTROWS(FILTER(prod_holding, prod_holding[App ngân hàng]=1 && prod_holding[Tiền gửi có kỳ hạn]=1))),
+				ROW("Product A", "App ngân hàng", "Product B", "Thẻ tín dụng", "Co-occurrence Count", COUNTROWS(FILTER(prod_holding, prod_holding[App ngân hàng]=1 && prod_holding[Thẻ tín dụng]=1))),
+				ROW("Product A", "App ngân hàng", "Product B", "App ngân hàng", "Co-occurrence Count", COUNTROWS(FILTER(prod_holding, prod_holding[App ngân hàng]=1 && prod_holding[App ngân hàng]=1))),
+				ROW("Product A", "App ngân hàng", "Product B", "Vay thế chấp", "Co-occurrence Count", COUNTROWS(FILTER(prod_holding, prod_holding[App ngân hàng]=1 && prod_holding[Vay thế chấp]=1))),
+				ROW("Product A", "App ngân hàng", "Product B", "Vay tín chấp", "Co-occurrence Count", COUNTROWS(FILTER(prod_holding, prod_holding[App ngân hàng]=1 && prod_holding[Vay tín chấp]=1))),
+				ROW("Product A", "Vay thế chấp", "Product B", "TK thanh toán", "Co-occurrence Count", COUNTROWS(FILTER(prod_holding, prod_holding[Vay thế chấp]=1 && prod_holding[TK thanh toán]=1))),
+				ROW("Product A", "Vay thế chấp", "Product B", "Tiền gửi có kỳ hạn", "Co-occurrence Count", COUNTROWS(FILTER(prod_holding, prod_holding[Vay thế chấp]=1 && prod_holding[Tiền gửi có kỳ hạn]=1))),
+				ROW("Product A", "Vay thế chấp", "Product B", "Thẻ tín dụng", "Co-occurrence Count", COUNTROWS(FILTER(prod_holding, prod_holding[Vay thế chấp]=1 && prod_holding[Thẻ tín dụng]=1))),
+				ROW("Product A", "Vay thế chấp", "Product B", "App ngân hàng", "Co-occurrence Count", COUNTROWS(FILTER(prod_holding, prod_holding[Vay thế chấp]=1 && prod_holding[App ngân hàng]=1))),
+				ROW("Product A", "Vay thế chấp", "Product B", "Vay thế chấp", "Co-occurrence Count", COUNTROWS(FILTER(prod_holding, prod_holding[Vay thế chấp]=1 && prod_holding[Vay thế chấp]=1))),
+				ROW("Product A", "Vay thế chấp", "Product B", "Vay tín chấp", "Co-occurrence Count", COUNTROWS(FILTER(prod_holding, prod_holding[Vay thế chấp]=1 && prod_holding[Vay tín chấp]=1))),
+				ROW("Product A", "Vay tín chấp", "Product B", "TK thanh toán", "Co-occurrence Count", COUNTROWS(FILTER(prod_holding, prod_holding[Vay tín chấp]=1 && prod_holding[TK thanh toán]=1))),
+				ROW("Product A", "Vay tín chấp", "Product B", "Tiền gửi có kỳ hạn", "Co-occurrence Count", COUNTROWS(FILTER(prod_holding, prod_holding[Vay tín chấp]=1 && prod_holding[Tiền gửi có kỳ hạn]=1))),
+				ROW("Product A", "Vay tín chấp", "Product B", "Thẻ tín dụng", "Co-occurrence Count", COUNTROWS(FILTER(prod_holding, prod_holding[Vay tín chấp]=1 && prod_holding[Thẻ tín dụng]=1))),
+				ROW("Product A", "Vay tín chấp", "Product B", "App ngân hàng", "Co-occurrence Count", COUNTROWS(FILTER(prod_holding, prod_holding[Vay tín chấp]=1 && prod_holding[App ngân hàng]=1))),
+				ROW("Product A", "Vay tín chấp", "Product B", "Vay thế chấp", "Co-occurrence Count", COUNTROWS(FILTER(prod_holding, prod_holding[Vay tín chấp]=1 && prod_holding[Vay thế chấp]=1))),
+				ROW("Product A", "Vay tín chấp", "Product B", "Vay tín chấp", "Co-occurrence Count", COUNTROWS(FILTER(prod_holding, prod_holding[Vay tín chấp]=1 && prod_holding[Vay tín chấp]=1))))
+

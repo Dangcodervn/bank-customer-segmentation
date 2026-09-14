@@ -1,0 +1,12 @@
+relationship AutoDetected_5b1f684a-c68e-4456-b8aa-e64e4424879b
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: cust.'Mã KH'
+	toColumn: aum.'Mã KH'
+
+relationship AutoDetected_7d056a42-52a1-4b60-a42a-895ef0fe80b7
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: prod_holding.'Mã KH'
+	toColumn: aum.'Mã KH'
+

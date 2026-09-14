@@ -1,0 +1,100 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 327,
+            "y": 134.734375
+          },
+          "nodeIndex": "aum",
+          "nodeLineageTag": "347dac3c-cdeb-44ad-ac89-775a5f4b3ab7",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 126.734375
+          },
+          "nodeIndex": "cust",
+          "nodeLineageTag": "e91c1517-81cb-41c0-81e3-904e28f164eb",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 698,
+            "y": 79.734375
+          },
+          "nodeIndex": "prod_holding",
+          "nodeLineageTag": "b474dc21-5e82-42d9-87dd-c5a26ee8a15e",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 982,
+            "y": 120.734375
+          },
+          "nodeIndex": "Product Co-occurrence",
+          "nodeLineageTag": "05203921-158f-4821-95a5-e06b322ccb05",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1266,
+            "y": 93.234375
+          },
+          "nodeIndex": "Product Correlation (Pearson)",
+          "nodeLineageTag": "46ec383e-d412-49b8-8802-accd40f775d3",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1550,
+            "y": 111.984375
+          },
+          "nodeIndex": "Product Penetration",
+          "nodeLineageTag": "7e1253ef-775f-471c-bc62-97bc8f3991e0",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

@@ -1,0 +1,13 @@
+# Power BI Desktop local/cache files (machine-specific, not meaningful to version)
+*/.pbi/cache.abf
+**/.pbi/localSettings.json
+**/.pbi/editorSettings.json
+*.tmp
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Editor/temp
+*.bak
+~$*

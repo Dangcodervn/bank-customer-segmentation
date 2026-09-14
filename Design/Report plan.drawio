@@ -1,0 +1,100 @@
+<mxfile host="app.diagrams.net" modified="2024-01-02T11:39:10.730Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="j9FYgKzqLzbRsSs9CwG0" version="22.1.16" type="device">
+  <diagram name="Page-1" id="spBAj1VKrom94jnCeH0d">
+    <mxGraphModel dx="954" dy="530" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="KyBoGl3MemL178n3R_SL-2" value="aum.csv" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="60" width="140" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="KyBoGl3MemL178n3R_SL-3" value="customer ID" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="KyBoGl3MemL178n3R_SL-2">
+          <mxGeometry y="30" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="KyBoGl3MemL178n3R_SL-4" value="Amount (total asset)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="KyBoGl3MemL178n3R_SL-2">
+          <mxGeometry y="60" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="KyBoGl3MemL178n3R_SL-6" value="cust.csv" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="285" y="60" width="140" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="KyBoGl3MemL178n3R_SL-7" value="customer ID" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="KyBoGl3MemL178n3R_SL-6">
+          <mxGeometry y="30" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="KyBoGl3MemL178n3R_SL-8" value="segment" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="KyBoGl3MemL178n3R_SL-6">
+          <mxGeometry y="60" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="KyBoGl3MemL178n3R_SL-9" value="Province" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="KyBoGl3MemL178n3R_SL-6">
+          <mxGeometry y="90" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="KyBoGl3MemL178n3R_SL-10" value="Product" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="60" width="140" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="KyBoGl3MemL178n3R_SL-11" value="CustomerID" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="KyBoGl3MemL178n3R_SL-10">
+          <mxGeometry y="30" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="KyBoGl3MemL178n3R_SL-12" value="ca (payment account)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="KyBoGl3MemL178n3R_SL-10">
+          <mxGeometry y="60" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="KyBoGl3MemL178n3R_SL-13" value="td (saving acount)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="KyBoGl3MemL178n3R_SL-10">
+          <mxGeometry y="90" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="KyBoGl3MemL178n3R_SL-14" value="credit card" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="KyBoGl3MemL178n3R_SL-10">
+          <mxGeometry y="120" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="KyBoGl3MemL178n3R_SL-15" value="app" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="KyBoGl3MemL178n3R_SL-10">
+          <mxGeometry y="150" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="KyBoGl3MemL178n3R_SL-16" value="secured loan" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="KyBoGl3MemL178n3R_SL-10">
+          <mxGeometry y="180" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="KyBoGl3MemL178n3R_SL-17" value="upp" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="KyBoGl3MemL178n3R_SL-10">
+          <mxGeometry y="210" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="KyBoGl3MemL178n3R_SL-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="KyBoGl3MemL178n3R_SL-18" target="KyBoGl3MemL178n3R_SL-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KyBoGl3MemL178n3R_SL-22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="KyBoGl3MemL178n3R_SL-18" target="KyBoGl3MemL178n3R_SL-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KyBoGl3MemL178n3R_SL-24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="KyBoGl3MemL178n3R_SL-18" target="KyBoGl3MemL178n3R_SL-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KyBoGl3MemL178n3R_SL-26" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="KyBoGl3MemL178n3R_SL-18" target="KyBoGl3MemL178n3R_SL-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KyBoGl3MemL178n3R_SL-29" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="KyBoGl3MemL178n3R_SL-18" target="KyBoGl3MemL178n3R_SL-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KyBoGl3MemL178n3R_SL-31" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="KyBoGl3MemL178n3R_SL-18" target="KyBoGl3MemL178n3R_SL-30">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KyBoGl3MemL178n3R_SL-18" value="Overview report" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="305" y="540" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KyBoGl3MemL178n3R_SL-19" value="Cross-Selling Opportunities: which products are often go together?" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="190" y="730" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KyBoGl3MemL178n3R_SL-21" value="Geo visualization: Total customer/ saving amount per province" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="480" y="540" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KyBoGl3MemL178n3R_SL-23" value="Product Penetration:&amp;nbsp; counting the number of customers with a &quot;1&quot; for each product and dividing by the total number of customers." style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="520" width="120" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="KyBoGl3MemL178n3R_SL-25" value="Total number of customer and per segment" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="185" y="400" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KyBoGl3MemL178n3R_SL-27" value="Credit card NA &amp;gt;&amp;gt; 0" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="255" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KyBoGl3MemL178n3R_SL-28" value="Total asset and per segment" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="400" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KyBoGl3MemL178n3R_SL-30" value="&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Product vs. Savings Correlation (scatter plot to see if higher saving also leads to higher use of any product)&lt;/span&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="420" y="730" width="160" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="KyBoGl3MemL178n3R_SL-34" value="create a new table to calculate product correlation" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="250" width="120" height="100" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

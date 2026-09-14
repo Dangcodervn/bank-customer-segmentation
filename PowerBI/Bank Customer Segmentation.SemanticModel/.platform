@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Bank Customer Segmentation"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "96bb3f99-2d91-4dd0-9f15-7aef47220deb"
+  }
+}

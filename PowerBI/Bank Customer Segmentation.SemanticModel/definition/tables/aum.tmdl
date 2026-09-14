@@ -1,0 +1,45 @@
+table aum
+	lineageTag: 347dac3c-cdeb-44ad-ac89-775a5f4b3ab7
+
+	measure 'Tổng tài sản (AUM)' = SUM(aum[Tổng tài sản])
+		formatString: #,##0
+		lineageTag: 8a2e316f-abed-4ffb-a2f0-a617a9603add
+
+	measure 'AUM trung bình/KH' = DIVIDE([Tổng tài sản (AUM)], [Tổng số khách hàng])
+		formatString: #,##0
+		lineageTag: 3f3dea87-cd36-4898-becc-000ce9295cb8
+
+	column 'Mã KH'
+		dataType: int64
+		formatString: 0
+		lineageTag: 0bbe7399-1eb3-4248-9039-3717f69a7674
+		summarizeBy: none
+		sourceColumn: Mã KH
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tổng tài sản'
+		dataType: double
+		lineageTag: b92595ae-5740-4e81-809d-80e847f29558
+		summarizeBy: sum
+		sourceColumn: Tổng tài sản
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition aum = m
+		mode: import
+		source =
+				let
+				  Source = Csv.Document(File.Contents("D:\Data Self Learning\Tran Hoang Long _ Data Analyst Course\Data Analyst\Bank Customer Segmentation\Data\aum.csv"),[Delimiter=",", Columns=2, QuoteStyle=QuoteStyle.None]),
+				  #"Promoted headers" = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				  #"Changed column type" = Table.TransformColumnTypes(#"Promoted headers", {{"customer_id", Int64.Type}, {"amount", type number}}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Changed column type",{{"customer_id", "Mã KH"}, {"amount", "Tổng tài sản"}})
+				in
+				  #"Renamed Columns"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

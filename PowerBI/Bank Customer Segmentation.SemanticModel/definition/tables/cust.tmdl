@@ -1,0 +1,68 @@
+table cust
+	lineageTag: e91c1517-81cb-41c0-81e3-904e28f164eb
+
+	measure 'Tổng số khách hàng' = COUNTROWS(cust)
+		formatString: #,0
+		lineageTag: 3445b94c-44b4-4435-8d98-f0ab2fdc35e9
+
+	column 'Mã KH'
+		dataType: int64
+		formatString: 0
+		lineageTag: e553dbff-49a9-4f42-a6ea-87d5893b55fe
+		summarizeBy: none
+		sourceColumn: Mã KH
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Phân khúc'
+		dataType: string
+		lineageTag: a4e44541-daa1-427d-a073-b4c461350b5c
+		summarizeBy: none
+		sourceColumn: Phân khúc
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tỉnh thành'
+		dataType: string
+		lineageTag: dd23b9c9-323b-496e-9434-66eb12b5da1f
+		dataCategory: StateOrProvince
+		summarizeBy: none
+		sourceColumn: Tỉnh thành
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Quốc gia'
+		dataType: string
+		lineageTag: 67d30708-b187-4aba-896d-22633a357a16
+		summarizeBy: none
+		sourceColumn: Custom
+
+		annotation SummarizationSetBy = Automatic
+
+	hierarchy 'Địa lý'
+		lineageTag: 1b9ad1cc-a6eb-4d9a-9789-bafbd2081961
+
+		level 'Quốc gia'
+			lineageTag: d7d1e5a6-22a9-49e8-a54e-32889e462084
+			column: 'Quốc gia'
+
+		level 'Tỉnh thành'
+			lineageTag: b22532ed-ee85-44fd-9bce-4977043caa5d
+			column: 'Tỉnh thành'
+
+	partition cust = m
+		mode: import
+		source =
+				let
+				  Source = Csv.Document(File.Contents("D:\Data Self Learning\Tran Hoang Long _ Data Analyst Course\Data Analyst\Bank Customer Segmentation\Data\cust.csv"),[Delimiter=",", Columns=3, QuoteStyle=QuoteStyle.None]),
+				  #"Promoted headers" = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				  #"Changed column type" = Table.TransformColumnTypes(#"Promoted headers", {{"customer_id", Int64.Type}, {"segment", type text}, {"province_city", type text}}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Changed column type",{{"customer_id", "Mã KH"}, {"segment", "Phân khúc"}, {"province_city", "Tỉnh thành"}}),
+				    #"Added Custom" = Table.AddColumn(#"Renamed Columns", "Custom", each "Việt Nam")
+				in
+				    #"Added Custom"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

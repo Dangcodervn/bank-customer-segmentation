@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Bank Customer Segmentation"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "f9921738-5fc6-4df7-8cb1-78a02c06f1b6"
+  }
+}

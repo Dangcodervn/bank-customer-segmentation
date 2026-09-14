@@ -1,0 +1,86 @@
+table prod_holding
+	lineageTag: b474dc21-5e82-42d9-87dd-c5a26ee8a15e
+
+	measure 'Số sản phẩm TB/KH' = AVERAGEX(prod_holding, prod_holding[TK thanh toán] + prod_holding[Tiền gửi có kỳ hạn] + prod_holding[Thẻ tín dụng] + prod_holding[App ngân hàng] + prod_holding[Vay thế chấp] + prod_holding[Vay tín chấp])
+		formatString: 0.00
+		lineageTag: 41b60ac8-5030-4cc7-be7e-88e3b59d701c
+
+	column 'Mã KH'
+		dataType: int64
+		formatString: 0
+		lineageTag: ee914e14-3ba9-4a69-bbdf-bdd8c78c7a02
+		summarizeBy: none
+		sourceColumn: Mã KH
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'TK thanh toán'
+		dataType: int64
+		formatString: 0
+		lineageTag: 5cfe34a5-0398-4b7c-a83c-ed09a0558d06
+		summarizeBy: none
+		sourceColumn: TK thanh toán
+
+		annotation SummarizationSetBy = User
+
+	column 'Tiền gửi có kỳ hạn'
+		dataType: int64
+		formatString: 0
+		lineageTag: 311dc0d8-2109-40b3-81bc-2c8e8a7311bb
+		summarizeBy: none
+		sourceColumn: Tiền gửi có kỳ hạn
+
+		annotation SummarizationSetBy = User
+
+	column 'Thẻ tín dụng'
+		dataType: int64
+		formatString: 0
+		lineageTag: f7c54ac2-3498-46d5-ba3b-20758727dd9e
+		summarizeBy: none
+		sourceColumn: Thẻ tín dụng
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'App ngân hàng'
+		dataType: int64
+		formatString: 0
+		lineageTag: 36102b02-df11-426e-b041-16141de627a5
+		summarizeBy: none
+		sourceColumn: App ngân hàng
+
+		annotation SummarizationSetBy = User
+
+	column 'Vay thế chấp'
+		dataType: int64
+		formatString: 0
+		lineageTag: ec0ebbd6-e594-4de0-9bb3-47de5e76eb4e
+		summarizeBy: none
+		sourceColumn: Vay thế chấp
+
+		annotation SummarizationSetBy = User
+
+	column 'Vay tín chấp'
+		dataType: int64
+		formatString: 0
+		lineageTag: 5df9404d-3a4b-4d07-9101-bff3c3a35922
+		summarizeBy: none
+		sourceColumn: Vay tín chấp
+
+		annotation SummarizationSetBy = User
+
+	partition prod_holding = m
+		mode: import
+		source =
+				let
+				  Source = Csv.Document(File.Contents("D:\Data Self Learning\Tran Hoang Long _ Data Analyst Course\Data Analyst\Bank Customer Segmentation\Data\prod_holding.csv"),[Delimiter=",", Columns=7, QuoteStyle=QuoteStyle.None]),
+				  #"Promoted headers" = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				  #"Replaced NA" = Table.ReplaceValue(#"Promoted headers", "NA", "0", Replacer.ReplaceText, {"prod_credit_card"}),
+				  #"Changed column type" = Table.TransformColumnTypes(#"Replaced NA", {{"customer_id", Int64.Type}, {"prod_ca", Int64.Type}, {"prod_td", Int64.Type}, {"prod_credit_card", Int64.Type}, {"prod_app", Int64.Type}, {"prod_secured_loan", Int64.Type}, {"prod_upl", Int64.Type}}),
+				  #"Renamed Columns" = Table.RenameColumns(#"Changed column type",{{"prod_ca", "TK thanh toán"}, {"prod_td", "Tiền gửi có kỳ hạn"}, {"prod_credit_card", "Thẻ tín dụng"}, {"prod_app", "App ngân hàng"}, {"prod_secured_loan", "Vay thế chấp"}, {"prod_upl", "Vay tín chấp"}, {"customer_id", "Mã KH"}})
+				in
+				  #"Renamed Columns"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+
