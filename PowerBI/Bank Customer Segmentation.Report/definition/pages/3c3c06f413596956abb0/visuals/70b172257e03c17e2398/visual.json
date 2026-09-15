@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "70b172257e03c17e2398",
   "position": {
     "x": 718.43871975019511,
     "y": 137.89227166276345,
-    "z": 12005,
+    "z": 12000,
     "height": 160.37470725995314,
     "width": 368.71194379391096,
-    "tabOrder": 12005
+    "tabOrder": 11000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -97,7 +97,7 @@
             "labelDisplayUnits": {
               "expr": {
                 "Literal": {
-                  "Value": "1D"
+                  "Value": "1000000000D"
                 }
               }
             },
@@ -110,7 +110,7 @@
             }
           },
           "selector": {
-            "metadata": "cust.Tổng số khách hàng"
+            "metadata": "aum.Tổng tài sản (AUM)"
           }
         }
       ],
@@ -187,9 +187,6 @@
                 }
               }
             }
-          },
-          "selector": {
-            "id": "default"
           }
         }
       ],
@@ -226,6 +223,19 @@
           },
           "selector": {
             "id": "default"
+          }
+        }
+      ],
+      "rotation": [
+        {
+          "properties": {
+            "shapeAngle": {
+              "expr": {
+                "Literal": {
+                  "Value": "0L"
+                }
+              }
+            }
           }
         }
       ]
@@ -276,8 +286,9 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "Literal": {
-                      "Value": "'#C8C6C4'"
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": 0
                     }
                   }
                 }
@@ -286,7 +297,7 @@
             "radius": {
               "expr": {
                 "Literal": {
-                  "Value": "6D"
+                  "Value": "10D"
                 }
               }
             },
@@ -350,10 +361,64 @@
       "title": [
         {
           "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
             "titleWrap": {
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0.2
+                    }
+                  }
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'left'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "13D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "''"
                 }
               }
             }
@@ -375,25 +440,33 @@
             "id": "default"
           }
         }
+      ],
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "keepLayerOrder": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
       ]
     }
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "ed70b2e0903c50608925",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "cust"
-              }
-            },
-            "Property": "Tổng số khách hàng"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

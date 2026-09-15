@@ -5,6 +5,10 @@ table prod_holding
 		formatString: 0.00
 		lineageTag: 41b60ac8-5030-4cc7-be7e-88e3b59d701c
 
+	measure 'Số SP sinh lãi/phí TB/KH' = AVERAGEX(prod_holding, prod_holding[Tiền gửi có kỳ hạn] + prod_holding[Thẻ tín dụng] + prod_holding[Vay thế chấp] + prod_holding[Vay tín chấp])
+		formatString: 0.00
+		lineageTag: d201704c-b264-4da6-8c87-e4b17b04c146
+
 	column 'Mã KH'
 		dataType: int64
 		formatString: 0
@@ -67,6 +71,36 @@ table prod_holding
 		sourceColumn: Vay tín chấp
 
 		annotation SummarizationSetBy = User
+
+	column 'TK thanh toán (nhãn)' = IF(prod_holding[TK thanh toán]=1, "Có", "Không")
+		dataType: string
+		lineageTag: 4fbc6309-8938-4064-8b58-a3dd062eedfe
+		summarizeBy: none
+
+	column 'Tiền gửi có kỳ hạn (nhãn)' = IF(prod_holding[Tiền gửi có kỳ hạn]=1, "Có", "Không")
+		dataType: string
+		lineageTag: 3f2b6b67-7cd0-4d9b-bd3c-bc7525357566
+		summarizeBy: none
+
+	column 'Thẻ tín dụng (nhãn)' = IF(prod_holding[Thẻ tín dụng]=1, "Có", "Không")
+		dataType: string
+		lineageTag: 813a9ecc-9063-4024-a904-de3d92bba911
+		summarizeBy: none
+
+	column 'App ngân hàng (nhãn)' = IF(prod_holding[App ngân hàng]=1, "Có", "Không")
+		dataType: string
+		lineageTag: 6ad2eaef-23ec-48af-be31-5ef59af11832
+		summarizeBy: none
+
+	column 'Vay thế chấp (nhãn)' = IF(prod_holding[Vay thế chấp]=1, "Có", "Không")
+		dataType: string
+		lineageTag: d60be549-b93a-4c5e-9f2d-70a60799b695
+		summarizeBy: none
+
+	column 'Vay tín chấp (nhãn)' = IF(prod_holding[Vay tín chấp]=1, "Có", "Không")
+		dataType: string
+		lineageTag: 1498930e-ca44-4add-821e-f55297bc4d3b
+		summarizeBy: none
 
 	partition prod_holding = m
 		mode: import

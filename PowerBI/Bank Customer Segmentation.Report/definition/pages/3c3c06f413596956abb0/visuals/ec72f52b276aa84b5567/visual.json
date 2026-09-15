@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "ec72f52b276aa84b5567",
   "position": {
     "x": 908.29039812646363,
     "y": 383.70023419203744,
-    "z": 8000,
+    "z": 5000,
     "height": 311.75644028103045,
     "width": 314.75409836065569,
-    "tabOrder": 7000
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "donutChart",
@@ -176,6 +176,50 @@
               }
             ]
           }
+        },
+        {
+          "properties": {
+            "borderShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "borderColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "borderSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "2D"
+                }
+              }
+            },
+            "borderOutlineOnly": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "borderColorMatchFill": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
         }
       ],
       "legend": [
@@ -212,6 +256,39 @@
               "expr": {
                 "Literal": {
                   "Value": "9D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "centerValue": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "value": [
+        {
+          "properties": {
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -392,7 +469,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "07a12aff5d0692db60b0",
+        "name": "89ade638576066a63e8a",
         "field": {
           "Column": {
             "Expression": {
@@ -406,7 +483,7 @@
         "type": "Categorical"
       },
       {
-        "name": "cf5a7b67702b676b2346",
+        "name": "15013aa7c5d9bc41038d",
         "field": {
           "Measure": {
             "Expression": {

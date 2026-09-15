@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "5990778017e25972803c",
   "position": {
     "x": 1531.8032786885246,
     "y": 137.89227166276345,
-    "z": 12003,
+    "z": 10000,
     "height": 160.37470725995314,
     "width": 368.71194379391096,
-    "tabOrder": 12003
+    "tabOrder": 9000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -91,6 +91,27 @@
           "selector": {
             "id": "default"
           }
+        },
+        {
+          "properties": {
+            "labelDisplayUnits": {
+              "expr": {
+                "Literal": {
+                  "Value": "1000000000D"
+                }
+              }
+            },
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "0L"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "aum.Tổng tài sản (AUM)"
+          }
         }
       ],
       "label": [
@@ -166,9 +187,6 @@
                 }
               }
             }
-          },
-          "selector": {
-            "id": "default"
           }
         }
       ],
@@ -205,6 +223,19 @@
           },
           "selector": {
             "id": "default"
+          }
+        }
+      ],
+      "rotation": [
+        {
+          "properties": {
+            "shapeAngle": {
+              "expr": {
+                "Literal": {
+                  "Value": "0L"
+                }
+              }
+            }
           }
         }
       ]
@@ -255,8 +286,9 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "Literal": {
-                      "Value": "'#C8C6C4'"
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": 0
                     }
                   }
                 }
@@ -265,7 +297,7 @@
             "radius": {
               "expr": {
                 "Literal": {
-                  "Value": "6D"
+                  "Value": "10D"
                 }
               }
             },
@@ -329,10 +361,57 @@
       "title": [
         {
           "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
             "titleWrap": {
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0.2
+                    }
+                  }
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'left'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "13D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
                 }
               }
             }
@@ -354,25 +433,33 @@
             "id": "default"
           }
         }
+      ],
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "keepLayerOrder": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
       ]
     }
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "3732dd8d6c96c3b6d7a6",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "prod_holding"
-              }
-            },
-            "Property": "Số sản phẩm TB/KH"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

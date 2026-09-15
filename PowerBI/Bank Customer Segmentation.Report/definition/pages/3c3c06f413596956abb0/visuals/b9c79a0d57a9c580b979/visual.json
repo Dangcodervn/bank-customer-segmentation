@@ -1,104 +1,101 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
-  "name": "62de8949125875a61201",
+  "name": "b9c79a0d57a9c580b979",
   "position": {
-    "x": 851.33489461358306,
-    "y": 323.74707259953158,
-    "z": 2000,
-    "height": 517.09601873536292,
-    "width": 439.15690866510533,
-    "tabOrder": 7000
+    "x": 37.933130699088146,
+    "y": 938.11550151975678,
+    "z": 22000,
+    "height": 80.243161094224916,
+    "width": 211.55015197568389,
+    "tabOrder": 21000
   },
   "visual": {
-    "visualType": "shape",
+    "visualType": "slicer",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "cust"
+                    }
+                  },
+                  "Property": "Phân khúc"
+                }
+              },
+              "queryRef": "cust.Phân khúc",
+              "nativeQueryRef": "Phân khúc",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
     "objects": {
-      "shape": [
+      "data": [
         {
           "properties": {
-            "tileShape": {
+            "mode": {
               "expr": {
                 "Literal": {
-                  "Value": "'rectangle'"
+                  "Value": "'Dropdown'"
                 }
               }
             }
           }
         }
       ],
-      "rotation": [
+      "general": [
         {
           "properties": {
-            "shapeAngle": {
-              "expr": {
-                "Literal": {
-                  "Value": "0L"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "fill": [
-        {
-          "properties": {
-            "fillColor": {
+            "outlineColor": {
               "solid": {
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
+                      "ColorId": 1,
+                      "Percent": 0.6
                     }
                   }
                 }
               }
             }
-          },
-          "selector": {
-            "id": "default"
           }
         }
       ],
-      "outline": [
+      "dropdown": [
         {
           "properties": {
-            "show": {
+            "borderColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "borderRadius": {
+              "expr": {
+                "Literal": {
+                  "Value": "10L"
+                }
+              }
+            },
+            "borderIndividualCorners": {
               "expr": {
                 "Literal": {
                   "Value": "false"
                 }
               }
-            }
-          }
-        }
-      ]
-    },
-    "visualContainerObjects": {
-      "title": [
-        {
-          "properties": {
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Tổng số khách hàng theo phân khúc'"
-                }
-              }
             },
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "titleWrap": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "fontColor": {
+            "iconColor": {
               "solid": {
                 "color": {
                   "expr": {
@@ -110,17 +107,23 @@
                 }
               }
             },
-            "alignment": {
+            "accentBarShow": {
               "expr": {
                 "Literal": {
-                  "Value": "'left'"
+                  "Value": "false"
                 }
               }
-            },
-            "fontSize": {
+            }
+          }
+        }
+      ],
+      "header": [
+        {
+          "properties": {
+            "fontFamily": {
               "expr": {
                 "Literal": {
-                  "Value": "13D"
+                  "Value": "'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
                 }
               }
             },
@@ -131,23 +134,38 @@
                 }
               }
             },
-            "fontFamily": {
+            "outlineStyle": {
               "expr": {
                 "Literal": {
-                  "Value": "'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
+                  "Value": "0D"
                 }
               }
             }
           }
         }
       ],
-      "subTitle": [
+      "items": [
         {
           "properties": {
-            "show": {
+            "outlineStyle": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -161,17 +179,6 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
-                }
-              }
-            },
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#FFFFFF'"
-                    }
-                  }
                 }
               }
             },
@@ -191,28 +198,14 @@
             "top": {
               "expr": {
                 "Literal": {
-                  "Value": "12D"
+                  "Value": "5D"
                 }
               }
             },
             "bottom": {
               "expr": {
                 "Literal": {
-                  "Value": "12D"
-                }
-              }
-            },
-            "left": {
-              "expr": {
-                "Literal": {
-                  "Value": "12D"
-                }
-              }
-            },
-            "right": {
-              "expr": {
-                "Literal": {
-                  "Value": "12D"
+                  "Value": "5D"
                 }
               }
             }
@@ -251,20 +244,7 @@
             "width": {
               "expr": {
                 "Literal": {
-                  "Value": "1D"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "visualHeader": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
+                  "Value": "3D"
                 }
               }
             }
@@ -274,5 +254,22 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "howCreated": "InsertVisualButton"
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "b6161e93d521168deb2d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "cust"
+              }
+            },
+            "Property": "Phân khúc"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
 }

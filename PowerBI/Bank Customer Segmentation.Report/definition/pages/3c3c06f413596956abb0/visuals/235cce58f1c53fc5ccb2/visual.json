@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "235cce58f1c53fc5ccb2",
   "position": {
     "x": 311.75644028103045,
     "y": 323.74707259953158,
-    "z": 7000,
+    "z": 4000,
     "height": 517.09601873536292,
     "width": 502.10772833723649,
-    "tabOrder": 6000
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "columnChart",
@@ -567,37 +567,5 @@
         }
       ]
     }
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "587c15e41d9011605415",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "cust"
-              }
-            },
-            "Property": "Phân khúc"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "61c50130605cdd2905dd",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "aum"
-              }
-            },
-            "Property": "Tổng tài sản (AUM)"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

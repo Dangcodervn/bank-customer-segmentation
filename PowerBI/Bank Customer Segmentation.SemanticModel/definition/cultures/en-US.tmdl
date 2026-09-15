@@ -1,2 +1,3170 @@
 cultureInfo en-US
 
+	linguisticMetadata =
+			{
+			  "Version": "4.1.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "aum.tổng_tài_sản_AUM": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "aum",
+			          "ConceptualProperty": "Tổng tài sản (AUM)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tổng tài sản (AUM)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Tổng tài sản": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "aum": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "aum"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "aum": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "aum.mã_KH": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "aum",
+			          "ConceptualProperty": "Mã KH"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mã KH": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "aum.tổng_tài_sản": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "aum",
+			          "ConceptualProperty": "Tổng tài sản"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tổng tài sản": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "aum.AUM_trung_bình_KH": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "aum",
+			          "ConceptualProperty": "AUM trung bình/KH"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "AUM trung bình/KH": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "AUM trung bình": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "AUM trung bình KH": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "KH": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "cust": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "cust"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cust": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "cust.mã_KH": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "cust",
+			          "ConceptualProperty": "Mã KH"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mã KH": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "cust.phân_khúc": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "cust",
+			          "ConceptualProperty": "Phân khúc"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "phân khúc": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "cust.tỉnh_thành": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "cust",
+			          "ConceptualProperty": "Tỉnh thành"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tỉnh thành": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "state or province": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Location"
+			    },
+			    "cust.quốc_gia": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "cust",
+			          "ConceptualProperty": "Quốc gia"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "quốc gia": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "cust.vĩ_độ": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "cust",
+			          "ConceptualProperty": "Vĩ độ"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "vĩ độ": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "cust.kinh_độ": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "cust",
+			          "ConceptualProperty": "Kinh độ"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "kinh độ": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "cust.tổng_số_khách_hàng": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "cust",
+			          "ConceptualProperty": "Tổng số khách hàng"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tổng số khách hàng": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "cust.tổng_khách_hàng": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "cust",
+			          "ConceptualProperty": "% Tổng khách hàng"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% tổng khách hàng": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage tổng khách hàng": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "pct tổng khách hàng": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
+			    },
+			    "cust.địa_lý": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "cust",
+			          "Hierarchy": "Địa lý"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "địa lý": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "cust.địa_lý.quốc_gia": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "cust",
+			          "Hierarchy": "Địa lý",
+			          "HierarchyLevel": "Quốc gia"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "quốc gia": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "cust.địa_lý.tỉnh_thành": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "cust",
+			          "Hierarchy": "Địa lý",
+			          "HierarchyLevel": "Tỉnh thành"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tỉnh thành": {
+			            "State": "Generated"
+			          }
+			        }
+			      ],
+			      "SemanticType": "Location"
+			    },
+			    "prod_holding": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "prod_holding"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "prod holding": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "prod_holding": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "holding": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "prod property": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "prod croft": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "prod allotment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "property": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "croft": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "allotment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "prod land": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "prod field": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "prod farm": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "prod plot": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "prod_holding.mã_KH": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "prod_holding",
+			          "ConceptualProperty": "Mã KH"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mã KH": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "prod_holding.TK_thanh_toán": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "prod_holding",
+			          "ConceptualProperty": "TK thanh toán"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "TK thanh toán": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "prod_holding.tiền_gửi_có_kỳ_hạn": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "prod_holding",
+			          "ConceptualProperty": "Tiền gửi có kỳ hạn"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tiền gửi có kỳ hạn": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "prod_holding.thẻ_tín_dụng": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "prod_holding",
+			          "ConceptualProperty": "Thẻ tín dụng"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "thẻ tín dụng": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "prod_holding.app_ngân_hàng": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "prod_holding",
+			          "ConceptualProperty": "App ngân hàng"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "app ngân hàng": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "prod_holding.vay_thế_chấp": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "prod_holding",
+			          "ConceptualProperty": "Vay thế chấp"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "vay thế chấp": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "prod_holding.vay_tín_chấp": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "prod_holding",
+			          "ConceptualProperty": "Vay tín chấp"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "vay tín chấp": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "prod_holding.TK_thanh_toán_nhãn": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "prod_holding",
+			          "ConceptualProperty": "TK thanh toán (nhãn)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "TK thanh toán (nhãn)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "TK thanh toán": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "prod_holding.tiền_gửi_có_kỳ_hạn_nhãn": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "prod_holding",
+			          "ConceptualProperty": "Tiền gửi có kỳ hạn (nhãn)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tiền gửi có kỳ hạn (nhãn)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "tiền gửi có kỳ hạn": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "prod_holding.thẻ_tín_dụng_nhãn": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "prod_holding",
+			          "ConceptualProperty": "Thẻ tín dụng (nhãn)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "thẻ tín dụng (nhãn)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "thẻ tín dụng": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "prod_holding.app_ngân_hàng_nhãn": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "prod_holding",
+			          "ConceptualProperty": "App ngân hàng (nhãn)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "app ngân hàng (nhãn)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "app ngân hàng": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "prod_holding.vay_thế_chấp_nhãn": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "prod_holding",
+			          "ConceptualProperty": "Vay thế chấp (nhãn)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "vay thế chấp (nhãn)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "vay thế chấp": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "prod_holding.vay_tín_chấp_nhãn": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "prod_holding",
+			          "ConceptualProperty": "Vay tín chấp (nhãn)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "vay tín chấp (nhãn)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "vay tín chấp": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "prod_holding.số_sản_phẩm_TB_KH": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "prod_holding",
+			          "ConceptualProperty": "Số sản phẩm TB/KH"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "số sản phẩm TB/KH": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "số sản phẩm TB": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "số sản phẩm TB KH": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "KH": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "prod_holding.số_SP_sinh_lãi_phí_TB_KH": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "prod_holding",
+			          "ConceptualProperty": "Số SP sinh lãi/phí TB/KH"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "số SP sinh lãi/phí TB/KH": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "số SP sinh lãi": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "phí TB": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "số SP sinh lãi phí TB KH": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "KH": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "product_cooccurrence": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Product Co-occurrence"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "product co-occurrence": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "product co occurrence": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "occurrence": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "co occurrence": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "artifact co-occurrence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "artifact co occurrence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "item co-occurrence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "merchandise co-occurrence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "produce co-occurrence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "item co occurrence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "merchandise co occurrence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "produce co occurrence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "product co-incidence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "product co-existence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        }
+			      ]
+			    },
+			    "product_cooccurrence.product_a": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Product Co-occurrence",
+			          "ConceptualProperty": "Product A"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "product a": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "artifact a": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "item a": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "merchandise a": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "produce a": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "product_cooccurrence.product_b": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Product Co-occurrence",
+			          "ConceptualProperty": "Product B"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "product b": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "b": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "artifact b": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "item b": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "merchandise b": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "produce b": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "product_cooccurrence.cooccurrence_count": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Product Co-occurrence",
+			          "ConceptualProperty": "Co-occurrence Count"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "co-occurrence count": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "co occurrence count": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "occurrence count": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "co-occurrence amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "co occurrence amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "occurrence amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "product_correlation_pearson": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Product Correlation (Pearson)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "product correlation (pearson)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "artifact correlation (pearson)": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "item correlation (pearson)": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "merchandise correlation (pearson)": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "produce correlation (pearson)": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        }
+			      ]
+			    },
+			    "product_correlation_pearson.sản_phẩm_a": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Product Correlation (Pearson)",
+			          "ConceptualProperty": "Sản phẩm A"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "sản phẩm a": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "product_correlation_pearson.sản_phẩm_b": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Product Correlation (Pearson)",
+			          "ConceptualProperty": "Sản phẩm B"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "sản phẩm b": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "product_correlation_pearson.hệ_số_tương_quan": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Product Correlation (Pearson)",
+			          "ConceptualProperty": "Hệ số tương quan"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "hệ số tương quan": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "product_penetration": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Product Penetration"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "product penetration": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "artifact penetration": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "item penetration": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "merchandise penetration": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "produce penetration": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "product diffusion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "product infiltration": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "product saturation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "product dispersion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "product dissemination": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "product permeation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        }
+			      ]
+			    },
+			    "product_penetration.product": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Product Penetration",
+			          "ConceptualProperty": "Product"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "product": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "artifact": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "item": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "merchandise": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "produce": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ]
+			    },
+			    "product_penetration.holder": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Product Penetration",
+			          "ConceptualProperty": "Holders"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "holder": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "container": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "receptacle": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "vessel": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "pouch": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "box": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "frame": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "pocket": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "owner": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "possessor": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "proprietor": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        }
+			      ]
+			    },
+			    "product_penetration.penetration": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Product Penetration",
+			          "ConceptualProperty": "Penetration"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "penetration": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "diffusion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "infiltration": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "saturation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "dispersion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "dissemination": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "permeation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "perception": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "astuteness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "discernment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "comprehension": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        }
+			      ]
+			    }
+			  },
+			  "Relationships": {
+			    "cust_địa_lý_quốc_gia_has_cust_địa_lý_tỉnh_thành": {
+			      "Binding": {
+			        "ConceptualEntity": "cust"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cust.địa_lý.quốc_gia": {
+			          "Target": {
+			            "Entity": "cust.địa_lý.quốc_gia"
+			          }
+			        },
+			        "cust.địa_lý.tỉnh_thành": {
+			          "Target": {
+			            "Entity": "cust.địa_lý.tỉnh_thành"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cust.địa_lý.quốc_gia"
+			            },
+			            "Object": {
+			              "Role": "cust.địa_lý.tỉnh_thành"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "quốc_gias_have_tỉnh_thànhs"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cust.địa_lý.tỉnh_thành"
+			            },
+			            "Object": {
+			              "Role": "cust.địa_lý.quốc_gia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tỉnh_thànhs_have_quốc_gias"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "cust.địa_lý.tỉnh_thành"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "cust.địa_lý.quốc_gia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tỉnh_thànhs_are_in_quốc_gias"
+			        }
+			      ]
+			    },
+			    "cust_địa_lý_has_tỉnh_thành": {
+			      "Binding": {
+			        "ConceptualEntity": "cust"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cust.địa_lý": {
+			          "Target": {
+			            "Entity": "cust.địa_lý"
+			          }
+			        },
+			        "cust.địa_lý.tỉnh_thành": {
+			          "Target": {
+			            "Entity": "cust.địa_lý.tỉnh_thành"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cust.địa_lý"
+			            },
+			            "Object": {
+			              "Role": "cust.địa_lý.tỉnh_thành"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "địa_lý_have_tỉnh_thànhs"
+			        }
+			      ]
+			    },
+			    "cust_địa_lý_has_quốc_gia": {
+			      "Binding": {
+			        "ConceptualEntity": "cust"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cust.địa_lý": {
+			          "Target": {
+			            "Entity": "cust.địa_lý"
+			          }
+			        },
+			        "cust.địa_lý.quốc_gia": {
+			          "Target": {
+			            "Entity": "cust.địa_lý.quốc_gia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cust.địa_lý"
+			            },
+			            "Object": {
+			              "Role": "cust.địa_lý.quốc_gia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "địa_lý_have_quốc_gias"
+			        }
+			      ]
+			    },
+			    "prod_holding_has_aum": {
+			      "Binding": {
+			        "ConceptualEntity": "prod_holding"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "prod_holding": {
+			          "Target": {
+			            "Entity": "prod_holding"
+			          }
+			        },
+			        "aum": {
+			          "Target": {
+			            "Entity": "aum"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "prod_holding"
+			            },
+			            "Object": {
+			              "Role": "aum"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "prod_holding_have_aum"
+			        }
+			      ]
+			    },
+			    "cust_has_aum": {
+			      "Binding": {
+			        "ConceptualEntity": "cust"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cust": {
+			          "Target": {
+			            "Entity": "cust"
+			          }
+			        },
+			        "aum": {
+			          "Target": {
+			            "Entity": "aum"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cust"
+			            },
+			            "Object": {
+			              "Role": "aum"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "custs_have_aum"
+			        }
+			      ]
+			    },
+			    "aum_has_prod_holding": {
+			      "Binding": {
+			        "ConceptualEntity": "aum"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "aum": {
+			          "Target": {
+			            "Entity": "aum"
+			          }
+			        },
+			        "prod_holding": {
+			          "Target": {
+			            "Entity": "prod_holding"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "aum"
+			            },
+			            "Object": {
+			              "Role": "prod_holding"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "aum_have_prod_holding"
+			        }
+			      ]
+			    },
+			    "aum_has_cust": {
+			      "Binding": {
+			        "ConceptualEntity": "aum"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "aum": {
+			          "Target": {
+			            "Entity": "aum"
+			          }
+			        },
+			        "cust": {
+			          "Target": {
+			            "Entity": "cust"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "aum"
+			            },
+			            "Object": {
+			              "Role": "cust"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "aum_have_custs"
+			        }
+			      ]
+			    },
+			    "product_penetration_has_penetration": {
+			      "Binding": {
+			        "ConceptualEntity": "Product Penetration"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "product_penetration": {
+			          "Target": {
+			            "Entity": "product_penetration"
+			          }
+			        },
+			        "product_penetration.penetration": {
+			          "Target": {
+			            "Entity": "product_penetration.penetration"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "product_penetration"
+			            },
+			            "Object": {
+			              "Role": "product_penetration.penetration"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "product_penetrations_have_penetrations"
+			        }
+			      ]
+			    },
+			    "product_penetration_has_holder": {
+			      "Binding": {
+			        "ConceptualEntity": "Product Penetration"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "product_penetration": {
+			          "Target": {
+			            "Entity": "product_penetration"
+			          }
+			        },
+			        "product_penetration.holder": {
+			          "Target": {
+			            "Entity": "product_penetration.holder"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "product_penetration"
+			            },
+			            "Object": {
+			              "Role": "product_penetration.holder"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "product_penetrations_have_holders"
+			        }
+			      ]
+			    },
+			    "product_penetration_has_product": {
+			      "Binding": {
+			        "ConceptualEntity": "Product Penetration"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "product_penetration": {
+			          "Target": {
+			            "Entity": "product_penetration"
+			          }
+			        },
+			        "product_penetration.product": {
+			          "Target": {
+			            "Entity": "product_penetration.product"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "product_penetration"
+			            },
+			            "Object": {
+			              "Role": "product_penetration.product"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "product_penetrations_have_products"
+			        }
+			      ]
+			    },
+			    "product_correlation_pearson_has_hệ_số_tương_quan": {
+			      "Binding": {
+			        "ConceptualEntity": "Product Correlation (Pearson)"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "product_correlation_pearson": {
+			          "Target": {
+			            "Entity": "product_correlation_pearson"
+			          }
+			        },
+			        "product_correlation_pearson.hệ_số_tương_quan": {
+			          "Target": {
+			            "Entity": "product_correlation_pearson.hệ_số_tương_quan"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "product_correlation_pearson"
+			            },
+			            "Object": {
+			              "Role": "product_correlation_pearson.hệ_số_tương_quan"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "product_correlation_pearson_have_hệ_số_tương_quans"
+			        }
+			      ]
+			    },
+			    "product_correlation_pearson_has_sản_phẩm_b": {
+			      "Binding": {
+			        "ConceptualEntity": "Product Correlation (Pearson)"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "product_correlation_pearson": {
+			          "Target": {
+			            "Entity": "product_correlation_pearson"
+			          }
+			        },
+			        "product_correlation_pearson.sản_phẩm_b": {
+			          "Target": {
+			            "Entity": "product_correlation_pearson.sản_phẩm_b"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "product_correlation_pearson"
+			            },
+			            "Object": {
+			              "Role": "product_correlation_pearson.sản_phẩm_b"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "product_correlation_pearson_have_sản_phẩm_b"
+			        }
+			      ]
+			    },
+			    "product_correlation_pearson_has_sản_phẩm_a": {
+			      "Binding": {
+			        "ConceptualEntity": "Product Correlation (Pearson)"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "product_correlation_pearson": {
+			          "Target": {
+			            "Entity": "product_correlation_pearson"
+			          }
+			        },
+			        "product_correlation_pearson.sản_phẩm_a": {
+			          "Target": {
+			            "Entity": "product_correlation_pearson.sản_phẩm_a"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "product_correlation_pearson"
+			            },
+			            "Object": {
+			              "Role": "product_correlation_pearson.sản_phẩm_a"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "product_correlation_pearson_have_sản_phẩm_a"
+			        }
+			      ]
+			    },
+			    "product_cooccurrence_has_cooccurrence_count": {
+			      "Binding": {
+			        "ConceptualEntity": "Product Co-occurrence"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "product_cooccurrence": {
+			          "Target": {
+			            "Entity": "product_cooccurrence"
+			          }
+			        },
+			        "product_cooccurrence.cooccurrence_count": {
+			          "Target": {
+			            "Entity": "product_cooccurrence.cooccurrence_count"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "product_cooccurrence"
+			            },
+			            "Object": {
+			              "Role": "product_cooccurrence.cooccurrence_count"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "product_cooccurrences_have_cooccurrence_counts"
+			        }
+			      ]
+			    },
+			    "product_cooccurrence_has_product_b": {
+			      "Binding": {
+			        "ConceptualEntity": "Product Co-occurrence"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "product_cooccurrence": {
+			          "Target": {
+			            "Entity": "product_cooccurrence"
+			          }
+			        },
+			        "product_cooccurrence.product_b": {
+			          "Target": {
+			            "Entity": "product_cooccurrence.product_b"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "product_cooccurrence"
+			            },
+			            "Object": {
+			              "Role": "product_cooccurrence.product_b"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "product_cooccurrences_have_product_b"
+			        }
+			      ]
+			    },
+			    "product_cooccurrence_has_product_a": {
+			      "Binding": {
+			        "ConceptualEntity": "Product Co-occurrence"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "product_cooccurrence": {
+			          "Target": {
+			            "Entity": "product_cooccurrence"
+			          }
+			        },
+			        "product_cooccurrence.product_a": {
+			          "Target": {
+			            "Entity": "product_cooccurrence.product_a"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "product_cooccurrence"
+			            },
+			            "Object": {
+			              "Role": "product_cooccurrence.product_a"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "product_cooccurrences_have_product_a"
+			        }
+			      ]
+			    },
+			    "prod_holding_has_số_SP_sinh_lãi_phí_TB_KH": {
+			      "Binding": {
+			        "ConceptualEntity": "prod_holding"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "prod_holding": {
+			          "Target": {
+			            "Entity": "prod_holding"
+			          }
+			        },
+			        "prod_holding.số_SP_sinh_lãi_phí_TB_KH": {
+			          "Target": {
+			            "Entity": "prod_holding.số_SP_sinh_lãi_phí_TB_KH"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "prod_holding"
+			            },
+			            "Object": {
+			              "Role": "prod_holding.số_SP_sinh_lãi_phí_TB_KH"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "prod_holding_have_số_SP_sinh_lãi_phí_TB_KH"
+			        }
+			      ]
+			    },
+			    "prod_holding_has_số_sản_phẩm_TB_KH": {
+			      "Binding": {
+			        "ConceptualEntity": "prod_holding"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "prod_holding": {
+			          "Target": {
+			            "Entity": "prod_holding"
+			          }
+			        },
+			        "prod_holding.số_sản_phẩm_TB_KH": {
+			          "Target": {
+			            "Entity": "prod_holding.số_sản_phẩm_TB_KH"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "prod_holding"
+			            },
+			            "Object": {
+			              "Role": "prod_holding.số_sản_phẩm_TB_KH"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "prod_holding_have_số_sản_phẩm_TB_KH"
+			        }
+			      ]
+			    },
+			    "prod_holding_has_vay_tín_chấp_nhãn": {
+			      "Binding": {
+			        "ConceptualEntity": "prod_holding"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "prod_holding": {
+			          "Target": {
+			            "Entity": "prod_holding"
+			          }
+			        },
+			        "prod_holding.vay_tín_chấp_nhãn": {
+			          "Target": {
+			            "Entity": "prod_holding.vay_tín_chấp_nhãn"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "prod_holding"
+			            },
+			            "Object": {
+			              "Role": "prod_holding.vay_tín_chấp_nhãn"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "prod_holding_have_vay_tín_chấp_nhãn"
+			        }
+			      ]
+			    },
+			    "prod_holding_has_vay_thế_chấp_nhãn": {
+			      "Binding": {
+			        "ConceptualEntity": "prod_holding"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "prod_holding": {
+			          "Target": {
+			            "Entity": "prod_holding"
+			          }
+			        },
+			        "prod_holding.vay_thế_chấp_nhãn": {
+			          "Target": {
+			            "Entity": "prod_holding.vay_thế_chấp_nhãn"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "prod_holding"
+			            },
+			            "Object": {
+			              "Role": "prod_holding.vay_thế_chấp_nhãn"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "prod_holding_have_vay_thế_chấp_nhãn"
+			        }
+			      ]
+			    },
+			    "prod_holding_has_app_ngân_hàng_nhãn": {
+			      "Binding": {
+			        "ConceptualEntity": "prod_holding"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "prod_holding": {
+			          "Target": {
+			            "Entity": "prod_holding"
+			          }
+			        },
+			        "prod_holding.app_ngân_hàng_nhãn": {
+			          "Target": {
+			            "Entity": "prod_holding.app_ngân_hàng_nhãn"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "prod_holding"
+			            },
+			            "Object": {
+			              "Role": "prod_holding.app_ngân_hàng_nhãn"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "prod_holding_have_app_ngân_hàng_nhãn"
+			        }
+			      ]
+			    },
+			    "prod_holding_has_thẻ_tín_dụng_nhãn": {
+			      "Binding": {
+			        "ConceptualEntity": "prod_holding"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "prod_holding": {
+			          "Target": {
+			            "Entity": "prod_holding"
+			          }
+			        },
+			        "prod_holding.thẻ_tín_dụng_nhãn": {
+			          "Target": {
+			            "Entity": "prod_holding.thẻ_tín_dụng_nhãn"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "prod_holding"
+			            },
+			            "Object": {
+			              "Role": "prod_holding.thẻ_tín_dụng_nhãn"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "prod_holding_have_thẻ_tín_dụng_nhãn"
+			        }
+			      ]
+			    },
+			    "prod_holding_has_tiền_gửi_có_kỳ_hạn_nhãn": {
+			      "Binding": {
+			        "ConceptualEntity": "prod_holding"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "prod_holding": {
+			          "Target": {
+			            "Entity": "prod_holding"
+			          }
+			        },
+			        "prod_holding.tiền_gửi_có_kỳ_hạn_nhãn": {
+			          "Target": {
+			            "Entity": "prod_holding.tiền_gửi_có_kỳ_hạn_nhãn"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "prod_holding"
+			            },
+			            "Object": {
+			              "Role": "prod_holding.tiền_gửi_có_kỳ_hạn_nhãn"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "prod_holding_have_tiền_gửi_có_kỳ_hạn_nhãn"
+			        }
+			      ]
+			    },
+			    "prod_holding_has_TK_thanh_toán_nhãn": {
+			      "Binding": {
+			        "ConceptualEntity": "prod_holding"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "prod_holding": {
+			          "Target": {
+			            "Entity": "prod_holding"
+			          }
+			        },
+			        "prod_holding.TK_thanh_toán_nhãn": {
+			          "Target": {
+			            "Entity": "prod_holding.TK_thanh_toán_nhãn"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "prod_holding"
+			            },
+			            "Object": {
+			              "Role": "prod_holding.TK_thanh_toán_nhãn"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "prod_holding_have_TK_thanh_toán_nhãn"
+			        }
+			      ]
+			    },
+			    "prod_holding_has_vay_tín_chấp": {
+			      "Binding": {
+			        "ConceptualEntity": "prod_holding"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "prod_holding": {
+			          "Target": {
+			            "Entity": "prod_holding"
+			          }
+			        },
+			        "prod_holding.vay_tín_chấp": {
+			          "Target": {
+			            "Entity": "prod_holding.vay_tín_chấp"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "prod_holding"
+			            },
+			            "Object": {
+			              "Role": "prod_holding.vay_tín_chấp"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "prod_holding_have_vay_tín_chấps"
+			        }
+			      ]
+			    },
+			    "prod_holding_has_vay_thế_chấp": {
+			      "Binding": {
+			        "ConceptualEntity": "prod_holding"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "prod_holding": {
+			          "Target": {
+			            "Entity": "prod_holding"
+			          }
+			        },
+			        "prod_holding.vay_thế_chấp": {
+			          "Target": {
+			            "Entity": "prod_holding.vay_thế_chấp"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "prod_holding"
+			            },
+			            "Object": {
+			              "Role": "prod_holding.vay_thế_chấp"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "prod_holding_have_vay_thế_chấps"
+			        }
+			      ]
+			    },
+			    "prod_holding_has_app_ngân_hàng": {
+			      "Binding": {
+			        "ConceptualEntity": "prod_holding"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "prod_holding": {
+			          "Target": {
+			            "Entity": "prod_holding"
+			          }
+			        },
+			        "prod_holding.app_ngân_hàng": {
+			          "Target": {
+			            "Entity": "prod_holding.app_ngân_hàng"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "prod_holding"
+			            },
+			            "Object": {
+			              "Role": "prod_holding.app_ngân_hàng"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "prod_holding_have_app_ngân_hàngs"
+			        }
+			      ]
+			    },
+			    "prod_holding_has_thẻ_tín_dụng": {
+			      "Binding": {
+			        "ConceptualEntity": "prod_holding"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "prod_holding": {
+			          "Target": {
+			            "Entity": "prod_holding"
+			          }
+			        },
+			        "prod_holding.thẻ_tín_dụng": {
+			          "Target": {
+			            "Entity": "prod_holding.thẻ_tín_dụng"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "prod_holding"
+			            },
+			            "Object": {
+			              "Role": "prod_holding.thẻ_tín_dụng"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "prod_holding_have_thẻ_tín_dụngs"
+			        }
+			      ]
+			    },
+			    "prod_holding_has_tiền_gửi_có_kỳ_hạn": {
+			      "Binding": {
+			        "ConceptualEntity": "prod_holding"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "prod_holding": {
+			          "Target": {
+			            "Entity": "prod_holding"
+			          }
+			        },
+			        "prod_holding.tiền_gửi_có_kỳ_hạn": {
+			          "Target": {
+			            "Entity": "prod_holding.tiền_gửi_có_kỳ_hạn"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "prod_holding"
+			            },
+			            "Object": {
+			              "Role": "prod_holding.tiền_gửi_có_kỳ_hạn"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "prod_holding_have_tiền_gửi_có_kỳ_hạns"
+			        }
+			      ]
+			    },
+			    "prod_holding_has_TK_thanh_toán": {
+			      "Binding": {
+			        "ConceptualEntity": "prod_holding"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "prod_holding": {
+			          "Target": {
+			            "Entity": "prod_holding"
+			          }
+			        },
+			        "prod_holding.TK_thanh_toán": {
+			          "Target": {
+			            "Entity": "prod_holding.TK_thanh_toán"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "prod_holding"
+			            },
+			            "Object": {
+			              "Role": "prod_holding.TK_thanh_toán"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "prod_holding_have_TK_thanh_toáns"
+			        }
+			      ]
+			    },
+			    "prod_holding_has_mã_KH": {
+			      "Binding": {
+			        "ConceptualEntity": "prod_holding"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "prod_holding": {
+			          "Target": {
+			            "Entity": "prod_holding"
+			          }
+			        },
+			        "prod_holding.mã_KH": {
+			          "Target": {
+			            "Entity": "prod_holding.mã_KH"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "prod_holding"
+			            },
+			            "Object": {
+			              "Role": "prod_holding.mã_KH"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "prod_holding_have_mã_KHs"
+			        }
+			      ]
+			    },
+			    "cust_has_địa_lý": {
+			      "Binding": {
+			        "ConceptualEntity": "cust"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cust": {
+			          "Target": {
+			            "Entity": "cust"
+			          }
+			        },
+			        "cust.địa_lý": {
+			          "Target": {
+			            "Entity": "cust.địa_lý"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cust"
+			            },
+			            "Object": {
+			              "Role": "cust.địa_lý"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "custs_have_địa_lý"
+			        }
+			      ]
+			    },
+			    "cust_has_tổng_khách_hàng": {
+			      "Binding": {
+			        "ConceptualEntity": "cust"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cust": {
+			          "Target": {
+			            "Entity": "cust"
+			          }
+			        },
+			        "cust.tổng_khách_hàng": {
+			          "Target": {
+			            "Entity": "cust.tổng_khách_hàng"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cust"
+			            },
+			            "Object": {
+			              "Role": "cust.tổng_khách_hàng"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "custs_have__tổng_khách_hàng"
+			        }
+			      ]
+			    },
+			    "cust_has_tổng_số_khách_hàng": {
+			      "Binding": {
+			        "ConceptualEntity": "cust"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cust": {
+			          "Target": {
+			            "Entity": "cust"
+			          }
+			        },
+			        "cust.tổng_số_khách_hàng": {
+			          "Target": {
+			            "Entity": "cust.tổng_số_khách_hàng"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cust"
+			            },
+			            "Object": {
+			              "Role": "cust.tổng_số_khách_hàng"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "custs_have_tổng_số_khách_hàng"
+			        }
+			      ]
+			    },
+			    "cust_has_kinh_độ": {
+			      "Binding": {
+			        "ConceptualEntity": "cust"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cust": {
+			          "Target": {
+			            "Entity": "cust"
+			          }
+			        },
+			        "cust.kinh_độ": {
+			          "Target": {
+			            "Entity": "cust.kinh_độ"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cust"
+			            },
+			            "Object": {
+			              "Role": "cust.kinh_độ"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "custs_have_kinh_độ"
+			        }
+			      ]
+			    },
+			    "cust_has_vĩ_độ": {
+			      "Binding": {
+			        "ConceptualEntity": "cust"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cust": {
+			          "Target": {
+			            "Entity": "cust"
+			          }
+			        },
+			        "cust.vĩ_độ": {
+			          "Target": {
+			            "Entity": "cust.vĩ_độ"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cust"
+			            },
+			            "Object": {
+			              "Role": "cust.vĩ_độ"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "custs_have_vĩ_độ"
+			        }
+			      ]
+			    },
+			    "cust_has_quốc_gia": {
+			      "Binding": {
+			        "ConceptualEntity": "cust"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cust": {
+			          "Target": {
+			            "Entity": "cust"
+			          }
+			        },
+			        "cust.quốc_gia": {
+			          "Target": {
+			            "Entity": "cust.quốc_gia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cust"
+			            },
+			            "Object": {
+			              "Role": "cust.quốc_gia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "custs_have_quốc_gias"
+			        }
+			      ]
+			    },
+			    "cust_has_tỉnh_thành": {
+			      "Binding": {
+			        "ConceptualEntity": "cust"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cust": {
+			          "Target": {
+			            "Entity": "cust"
+			          }
+			        },
+			        "cust.tỉnh_thành": {
+			          "Target": {
+			            "Entity": "cust.tỉnh_thành"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cust"
+			            },
+			            "Object": {
+			              "Role": "cust.tỉnh_thành"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "custs_have_tỉnh_thànhs"
+			        }
+			      ]
+			    },
+			    "cust_has_phân_khúc": {
+			      "Binding": {
+			        "ConceptualEntity": "cust"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cust": {
+			          "Target": {
+			            "Entity": "cust"
+			          }
+			        },
+			        "cust.phân_khúc": {
+			          "Target": {
+			            "Entity": "cust.phân_khúc"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cust"
+			            },
+			            "Object": {
+			              "Role": "cust.phân_khúc"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "custs_have_phân_khúcs"
+			        }
+			      ]
+			    },
+			    "cust_has_mã_KH": {
+			      "Binding": {
+			        "ConceptualEntity": "cust"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cust": {
+			          "Target": {
+			            "Entity": "cust"
+			          }
+			        },
+			        "cust.mã_KH": {
+			          "Target": {
+			            "Entity": "cust.mã_KH"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cust"
+			            },
+			            "Object": {
+			              "Role": "cust.mã_KH"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "custs_have_mã_KHs"
+			        }
+			      ]
+			    },
+			    "cust_has_aum_AUM_trung_bình_KH": {
+			      "Binding": {
+			        "ConceptualEntity": "cust"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cust": {
+			          "Target": {
+			            "Entity": "cust"
+			          }
+			        },
+			        "aum.AUM_trung_bình_KH": {
+			          "Target": {
+			            "Entity": "aum.AUM_trung_bình_KH"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cust"
+			            },
+			            "Object": {
+			              "Role": "aum.AUM_trung_bình_KH"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "custs_have_AUM_trung_bình_KH"
+			        }
+			      ]
+			    },
+			    "aum_has_AUM_trung_bình_KH": {
+			      "Binding": {
+			        "ConceptualEntity": "aum"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "aum": {
+			          "Target": {
+			            "Entity": "aum"
+			          }
+			        },
+			        "aum.AUM_trung_bình_KH": {
+			          "Target": {
+			            "Entity": "aum.AUM_trung_bình_KH"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "aum"
+			            },
+			            "Object": {
+			              "Role": "aum.AUM_trung_bình_KH"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "aum_have_AUM_trung_bình_KH"
+			        }
+			      ]
+			    },
+			    "aum_has_tổng_tài_sản": {
+			      "Binding": {
+			        "ConceptualEntity": "aum"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "aum": {
+			          "Target": {
+			            "Entity": "aum"
+			          }
+			        },
+			        "aum.tổng_tài_sản": {
+			          "Target": {
+			            "Entity": "aum.tổng_tài_sản"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "aum"
+			            },
+			            "Object": {
+			              "Role": "aum.tổng_tài_sản"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "aum_have_tổng_tài_sảns"
+			        }
+			      ]
+			    },
+			    "aum_has_mã_KH": {
+			      "Binding": {
+			        "ConceptualEntity": "aum"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "aum": {
+			          "Target": {
+			            "Entity": "aum"
+			          }
+			        },
+			        "aum.mã_KH": {
+			          "Target": {
+			            "Entity": "aum.mã_KH"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "aum"
+			            },
+			            "Object": {
+			              "Role": "aum.mã_KH"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "aum_have_mã_KHs"
+			        }
+			      ]
+			    },
+			    "aum_has_tổng_tài_sản_AUM": {
+			      "Binding": {
+			        "ConceptualEntity": "aum"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "aum": {
+			          "Target": {
+			            "Entity": "aum"
+			          }
+			        },
+			        "aum.tổng_tài_sản_AUM": {
+			          "Target": {
+			            "Entity": "aum.tổng_tài_sản_AUM"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "aum"
+			            },
+			            "Object": {
+			              "Role": "aum.tổng_tài_sản_AUM"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "aum_have_tổng_tài_sản_AUM"
+			        }
+			      ]
+			    },
+			    "cust_in_tỉnh_thành": {
+			      "Binding": {
+			        "ConceptualEntity": "cust"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cust": {
+			          "Target": {
+			            "Entity": "cust"
+			          }
+			        },
+			        "cust.tỉnh_thành": {
+			          "Target": {
+			            "Entity": "cust.tỉnh_thành"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "cust.tỉnh_thành"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "cust"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "cust.tỉnh_thành"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "custs_are_in_tỉnh_thànhs"
+			        }
+			      ]
+			    }
+			  },
+			  "Agents": {
+			    "Internal": {
+			      "Version": "1.1.0"
+			    }
+			  }
+			}
+		contentType: json
+
