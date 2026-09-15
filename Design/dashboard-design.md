@@ -2,10 +2,10 @@
 
 Đối tượng xem: **Giám đốc chi nhánh ngân hàng** (executive, cần đọc nhanh, ít clutter).
 
-Báo cáo gồm các trang:
-1. Tổng quan khách hàng & Phân khúc (gộp Q1 + Q2)
-2. Cơ hội tăng doanh thu 20% (Q3)
-3. (tuỳ chọn) Drill-through chi tiết
+Báo cáo gồm 3 trang (1920×1080, `FitToPage`):
+1. **Overview** — Tổng quan khách hàng & Phân khúc (gộp Q1 + Q2)
+2. **Product analysis** — Cơ hội tăng doanh thu 20% (Q3)
+3. **Cusomer detail** — Drill-through chi tiết theo khách hàng
 
 ---
 
@@ -83,12 +83,42 @@ Dùng 6 màu còn lại của `dataColors`, chia theo nhóm ý nghĩa kinh doanh
 
 ## 2. Bố cục trang (Layout)
 
-*(Chưa hoàn thiện — sẽ bổ sung)*
+Cả 3 trang dùng chung 1 khung layout để giữ tính nhất quán:
+
+- **Header bar** (trên cùng): nền navy `#3257A8`, chứa tiêu đề trang (textbox, chữ trắng) + các nút điều hướng trang (`actionButton` với `visualLink` type `PageNavigation`) và/hoặc `pageNavigator`.
+- **Sidebar trái** (`shape` nền trắng, viền `#C8C6C4`): gom toàn bộ slicer của trang — Phân khúc, Tỉnh thành, và 6 slicer sản phẩm (theo cột `(nhãn)` Có/Không) để có thể dùng làm slicer thực sự (thay vì cột 0/1 gốc không lọc được).
+- **Vùng nội dung chính** (còn lại của trang): card KPI xếp hàng ngang phía trên, chart chính bên dưới — mỗi chart là 1 `shape`/container nền trắng bo góc, viền `#C8C6C4`, tiêu đề chart căn trái, `visualHeader` ẩn để giảm clutter.
+
+Nguyên tắc: **không lặp lại một loại thông tin ở 2 trang** (trừ bộ slicer — được lặp lại có chủ đích trên mỗi trang để lọc độc lập theo ngữ cảnh của trang đó).
 
 ## 3. Lựa chọn biểu đồ (Chart selection)
 
-*(Chưa hoàn thiện — sẽ bổ sung)*
+| Trang | Visual | Loại | Vai trò |
+|---|---|---|---|
+| **1. Overview** | 4× Card | `cardVisual` | KPI tổng: Tổng số KH, Tổng AUM, AUM trung bình/KH, Số sản phẩm TB/KH |
+| | Cột theo phân khúc | `columnChart` | Tổng AUM theo Gold/Silver/Regular |
+| | Donut theo phân khúc | `donutChart` | Tỷ trọng số khách hàng theo phân khúc |
+| | Bản đồ Việt Nam | `map` (classic, không phải Azure Map) | AUM theo tỉnh/thành, bubble size = AUM, màu = phân khúc, auto-geocode qua tên tỉnh (`dataCategory: StateOrProvince`) |
+| | Bảng tổng hợp sản phẩm | `pivotTable` | Số lượng theo từng sản phẩm × phân khúc |
+| | Bảng chi tiết | `tableEx` | Danh sách khách hàng/chi tiết dòng |
+| | 8× Slicer | `slicer` | Phân khúc, Tỉnh thành, 6 sản phẩm (nhãn Có/Không) |
+| **2. Product analysis** | Scatter | `scatterChart` | AUM trung bình/KH vs Số SP sinh lãi/phí TB/KH, mỗi điểm = 1 tỉnh × phân khúc, size = số KH — trả lời "tài sản có tương quan với độ sâu sản phẩm không" |
+| | Ma trận Cross-sell | `pivotTable` + gradient fill | Từ bảng tính `Product Co-occurrence` — sản phẩm nào hay đi cùng nhau |
+| | 6× Slicer sản phẩm | `slicer` | Lọc theo từng sản phẩm đang sở hữu |
+| **3. Cusomer detail** | Bảng chi tiết | `tableEx` | Drill-through danh sách khách hàng theo bộ lọc |
+| | 7× Slicer | `slicer` | Lọc chi tiết theo phân khúc/tỉnh/sản phẩm |
+
+**Chart còn thiếu (đã note ở model nhưng chưa build):** bảng `Product Penetration` (% thâm nhập từng sản phẩm) và `Product Correlation (Pearson)` chưa được gắn vào visual nào — xem trao đổi "DAX không dùng" trong lịch sử làm việc.
 
 ## 4. Typography
 
-*(Chưa hoàn thiện — sẽ bổ sung)*
+| Vai trò | Font | Size | Style |
+|---|---|---|---|
+| Tiêu đề chart (`visualContainerObjects.title`) | Segoe UI | 13pt | Bold, màu `#0F172A`, căn trái |
+| Nội dung chart (label, legend, axis) | Segoe UI | 11pt | Regular, màu `#334155` |
+| KPI card — số liệu chính | Segoe UI / DIN | 24–28pt | Bold, màu brand `#3257A8` hoặc theo màu category |
+| KPI card — label | Segoe UI | 11pt | Regular, màu `#64748B` |
+| Tiêu đề trang (header bar) | Segoe UI | 16–18pt | Bold, màu trắng trên nền navy |
+| Callout / insight text | Segoe UI | 12–13pt | Bold hoặc Italic, màu nhấn `#DD6B7F` |
+
+Quy tắc: mỗi chart ẩn `visualHeader` mặc định của Power BI (nút filter/pin/…) để tránh rối mắt — chỉ giữ tiêu đề tự đặt.
