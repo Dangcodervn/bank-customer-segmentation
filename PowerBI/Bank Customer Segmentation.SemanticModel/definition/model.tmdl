@@ -16,8 +16,6 @@ ref table aum
 ref table cust
 ref table prod_holding
 ref table 'Product Co-occurrence'
-ref table 'Product Correlation (Pearson)'
-ref table 'Product Penetration'
 
 ref cultureInfo en-US
 

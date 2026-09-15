@@ -1,0 +1,751 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "24f3f72766073d94919a",
+  "position": {
+    "x": 284.49848024316111,
+    "y": 138.60182370820669,
+    "z": 13001,
+    "height": 920.60790273556233,
+    "width": 1635.5015197568389,
+    "tabOrder": 14
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "aum"
+                    }
+                  },
+                  "Property": "Mã KH"
+                }
+              },
+              "queryRef": "aum.Mã KH",
+              "nativeQueryRef": "Mã KH"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "cust"
+                    }
+                  },
+                  "Property": "Phân khúc"
+                }
+              },
+              "queryRef": "cust.Phân khúc",
+              "nativeQueryRef": "Phân khúc"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "aum"
+                    }
+                  },
+                  "Property": "Tổng tài sản (AUM)"
+                }
+              },
+              "queryRef": "aum.Tổng tài sản (AUM)",
+              "nativeQueryRef": "Tổng tài sản (AUM)"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "prod_holding"
+                    }
+                  },
+                  "Property": "TK thanh toán"
+                }
+              },
+              "queryRef": "prod_holding.TK thanh toán",
+              "nativeQueryRef": "TK thanh toán"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "prod_holding"
+                    }
+                  },
+                  "Property": "App ngân hàng"
+                }
+              },
+              "queryRef": "prod_holding.App ngân hàng",
+              "nativeQueryRef": "App ngân hàng"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "prod_holding"
+                    }
+                  },
+                  "Property": "Thẻ tín dụng"
+                }
+              },
+              "queryRef": "prod_holding.Thẻ tín dụng",
+              "nativeQueryRef": "Thẻ tín dụng"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "prod_holding"
+                    }
+                  },
+                  "Property": "Tiền gửi có kỳ hạn"
+                }
+              },
+              "queryRef": "prod_holding.Tiền gửi có kỳ hạn",
+              "nativeQueryRef": "Tiền gửi có kỳ hạn"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "prod_holding"
+                    }
+                  },
+                  "Property": "Vay thế chấp"
+                }
+              },
+              "queryRef": "prod_holding.Vay thế chấp",
+              "nativeQueryRef": "Vay thế chấp"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "prod_holding"
+                    }
+                  },
+                  "Property": "Vay tín chấp"
+                }
+              },
+              "queryRef": "prod_holding.Vay tín chấp",
+              "nativeQueryRef": "Vay tín chấp"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "prod_holding"
+                    }
+                  },
+                  "Property": "Số sản phẩm TB/KH"
+                }
+              },
+              "queryRef": "prod_holding.Số sản phẩm TB/KH",
+              "nativeQueryRef": "Số sản phẩm TB/KH"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "prod_holding"
+                    }
+                  },
+                  "Property": "Số SP sinh lãi/phí TB/KH"
+                }
+              },
+              "queryRef": "prod_holding.Số SP sinh lãi/phí TB/KH",
+              "nativeQueryRef": "Số SP sinh lãi/phí TB/KH"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "cust"
+                    }
+                  },
+                  "Property": "Tỉnh thành"
+                }
+              },
+              "queryRef": "cust.Tỉnh thành",
+              "nativeQueryRef": "Tỉnh thành"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "aum"
+                  }
+                },
+                "Property": "Mã KH"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "columnHeaders": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "13D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
+                }
+              }
+            },
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#3257A8'"
+                    }
+                  }
+                }
+              }
+            },
+            "columnAdjustment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'growToFit'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "13D"
+                }
+              }
+            },
+            "fontColorPrimary": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "backColorPrimary": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "fontColorSecondary": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0.2
+                    }
+                  }
+                }
+              }
+            },
+            "backColorSecondary": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "FillRule": {
+                      "Input": {
+                        "SelectRef": {
+                          "ExpressionName": "Sum(Product Co-occurrence.Co-occurrence Count)"
+                        }
+                      },
+                      "FillRule": {
+                        "linearGradient2": {
+                          "min": {
+                            "color": {
+                              "Literal": {
+                                "Value": "'#D1DBF1'"
+                              }
+                            }
+                          },
+                          "max": {
+                            "color": {
+                              "Literal": {
+                                "Value": "'#3257A8'"
+                              }
+                            }
+                          },
+                          "nullColoringStrategy": {
+                            "strategy": {
+                              "Literal": {
+                                "Value": "'noColor'"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "Sum(Product Co-occurrence.Co-occurrence Count)"
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#0F172A'"
+                    }
+                  }
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'left'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "bottom": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "left": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "right": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            },
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "stylePreset": [
+        {
+          "properties": {
+            "name": {
+              "expr": {
+                "Literal": {
+                  "Value": "'None'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "c2223879837c4e2051e9",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "aum"
+              }
+            },
+            "Property": "Mã KH"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "09b96ca66097bb24b0ad",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "aum"
+              }
+            },
+            "Property": "Tổng tài sản (AUM)"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "5d86cf7063d0953d4c06",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "prod_holding"
+              }
+            },
+            "Property": "TK thanh toán"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "1450ffe8ee0b7a30e4ca",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "prod_holding"
+              }
+            },
+            "Property": "App ngân hàng"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "8063c6184e0b0a85e06d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "prod_holding"
+              }
+            },
+            "Property": "Thẻ tín dụng"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "6f89d4ae1091eadde143",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "prod_holding"
+              }
+            },
+            "Property": "Tiền gửi có kỳ hạn"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "6b7b639ba3e3a003d108",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "prod_holding"
+              }
+            },
+            "Property": "Vay thế chấp"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "a60feec884d2207557b9",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "prod_holding"
+              }
+            },
+            "Property": "Vay tín chấp"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "867dc2dfe6d1a7765d89",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "prod_holding"
+              }
+            },
+            "Property": "Số sản phẩm TB/KH"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "3922e170b2b06d7a2ddd",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "prod_holding"
+              }
+            },
+            "Property": "Số SP sinh lãi/phí TB/KH"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "c105071120de8a16be74",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "cust"
+              }
+            },
+            "Property": "Phân khúc"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "01f4ba025400cc95d157",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "cust"
+              }
+            },
+            "Property": "Tỉnh thành"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}

@@ -65,7 +65,56 @@
                 }
               },
               "queryRef": "aum.Tổng tài sản (AUM)",
-              "nativeQueryRef": "Tổng tài sản (AUM)"
+              "nativeQueryRef": "Tổng tài sản",
+              "displayName": "Tổng tài sản"
+            }
+          ]
+        },
+        "X": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "cust"
+                        }
+                      },
+                      "Property": "Kinh độ"
+                    }
+                  },
+                  "Function": 1
+                }
+              },
+              "queryRef": "Avg(cust.Kinh độ)",
+              "nativeQueryRef": "Kinh độ",
+              "displayName": "Kinh độ"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "cust"
+                        }
+                      },
+                      "Property": "Vĩ độ"
+                    }
+                  },
+                  "Function": 1
+                }
+              },
+              "queryRef": "Avg(cust.Vĩ độ)",
+              "nativeQueryRef": "Vĩ độ",
+              "displayName": "Vĩ độ"
             }
           ]
         }
@@ -231,14 +280,14 @@
             "centerLatitude": {
               "expr": {
                 "Literal": {
-                  "Value": "15.932190028154551D"
+                  "Value": "16.37201891243909D"
                 }
               }
             },
             "centerLongitude": {
               "expr": {
                 "Literal": {
-                  "Value": "107.30209510482162D"
+                  "Value": "104.71082022592202D"
                 }
               }
             },
@@ -496,5 +545,81 @@
         }
       ]
     }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "2fab0fffdde175c5267b",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "cust"
+              }
+            },
+            "Property": "Tỉnh thành"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "c",
+              "Entity": "cust",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "c"
+                              }
+                            },
+                            "Property": "Tỉnh thành"
+                          }
+                        }
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "'No Info'"
+                            }
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "objects": {
+          "general": [
+            {
+              "properties": {
+                "isInvertedSelectionMode": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "true"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
   }
 }

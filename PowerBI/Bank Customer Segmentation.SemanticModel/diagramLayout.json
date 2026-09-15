@@ -59,32 +59,6 @@
             "width": 234
           },
           "zIndex": 0
-        },
-        {
-          "location": {
-            "x": 1266,
-            "y": 93.234375
-          },
-          "nodeIndex": "Product Correlation (Pearson)",
-          "nodeLineageTag": "46ec383e-d412-49b8-8802-accd40f775d3",
-          "size": {
-            "height": 200,
-            "width": 234
-          },
-          "zIndex": 0
-        },
-        {
-          "location": {
-            "x": 1550,
-            "y": 111.984375
-          },
-          "nodeIndex": "Product Penetration",
-          "nodeLineageTag": "7e1253ef-775f-471c-bc62-97bc8f3991e0",
-          "size": {
-            "height": 152,
-            "width": 234
-          },
-          "zIndex": 0
         }
       ],
       "name": "All tables",

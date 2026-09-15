@@ -550,5 +550,56 @@
         }
       ]
     }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "d9a5aa2edbe647c734a0",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Product Co-occurrence"
+              }
+            },
+            "Property": "Product B"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "4a6704975b17c70c418d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Product Co-occurrence"
+              }
+            },
+            "Property": "Product A"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "1908d43e4080ecaa481e",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Product Co-occurrence"
+                  }
+                },
+                "Property": "Co-occurrence Count"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }
