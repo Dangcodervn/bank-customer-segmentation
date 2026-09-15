@@ -143,24 +143,11 @@
         }
       ]
     },
+    "syncGroup": {
+      "groupName": "App ngân hàng (nhãn)",
+      "fieldChanges": true,
+      "filterChanges": true
+    },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "6105a8db2aa9080d6045",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "prod_holding"
-              }
-            },
-            "Property": "App ngân hàng (nhãn)"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

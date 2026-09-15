@@ -220,23 +220,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "fd6ecd5b5121e3680047",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "cust"
-              }
-            },
-            "Property": "Tỉnh thành"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

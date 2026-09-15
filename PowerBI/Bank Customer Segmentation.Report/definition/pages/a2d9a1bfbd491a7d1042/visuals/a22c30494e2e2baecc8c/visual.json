@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
-  "name": "f775ae02a31676b61575",
+  "name": "a22c30494e2e2baecc8c",
   "position": {
     "x": 45.227963525835868,
-    "y": 617.14285714285711,
-    "z": 19000,
+    "y": 323.89057750759878,
+    "z": 7000,
     "height": 97.750759878419458,
     "width": 192.58358662613981,
-    "tabOrder": 18000
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "slicer",
@@ -23,13 +23,13 @@
                       "Entity": "prod_holding"
                     }
                   },
-                  "Property": "Vay thế chấp (nhãn)"
+                  "Property": "App ngân hàng (nhãn)"
                 }
               },
-              "queryRef": "prod_holding.Vay thế chấp (nhãn)",
-              "nativeQueryRef": "Vay thế chấp",
+              "queryRef": "prod_holding.App ngân hàng (nhãn)",
+              "nativeQueryRef": "App ngân hàng",
               "active": true,
-              "displayName": "Vay thế chấp"
+              "displayName": "App ngân hàng"
             }
           ]
         }
@@ -144,7 +144,7 @@
       ]
     },
     "syncGroup": {
-      "groupName": "Vay thế chấp (nhãn)",
+      "groupName": "App ngân hàng (nhãn)",
       "fieldChanges": true,
       "filterChanges": true
     },

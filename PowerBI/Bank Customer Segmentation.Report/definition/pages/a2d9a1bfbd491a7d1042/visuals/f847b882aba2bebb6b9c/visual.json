@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "f847b882aba2bebb6b9c",
   "position": {
-    "x": 696.95550351288057,
-    "y": 596.53395784543318,
-    "z": 2000,
-    "height": 224.82435597189695,
-    "width": 980.23419203747062,
-    "tabOrder": 2000
+    "x": 293.25227963525833,
+    "y": 641.94528875379933,
+    "z": 1000,
+    "height": 220.30395136778114,
+    "width": 1607.7811550151976,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "pivotTable",
@@ -397,8 +397,9 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "Literal": {
-                      "Value": "'#C8C6C4'"
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": 0
                     }
                   }
                 }
@@ -407,7 +408,7 @@
             "radius": {
               "expr": {
                 "Literal": {
-                  "Value": "6D"
+                  "Value": "10D"
                 }
               }
             }
@@ -533,5 +534,56 @@
         }
       ]
     }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "24493fb6d85b9bd24e36",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Product Co-occurrence"
+              }
+            },
+            "Property": "Product B"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "2f12922c3d933ab0acc3",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Product Co-occurrence"
+              }
+            },
+            "Property": "Product A"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "a1e4105f14608718091a",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Product Co-occurrence"
+                  }
+                },
+                "Property": "Co-occurrence Count"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

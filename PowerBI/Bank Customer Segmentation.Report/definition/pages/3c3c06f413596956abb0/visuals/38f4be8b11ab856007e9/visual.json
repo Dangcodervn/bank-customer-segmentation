@@ -95,24 +95,11 @@
         }
       ]
     },
+    "syncGroup": {
+      "groupName": "TK thanh toán (nhãn)",
+      "fieldChanges": true,
+      "filterChanges": true
+    },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "9144d48044954b2d0ea5",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "prod_holding"
-              }
-            },
-            "Property": "TK thanh toán (nhãn)"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

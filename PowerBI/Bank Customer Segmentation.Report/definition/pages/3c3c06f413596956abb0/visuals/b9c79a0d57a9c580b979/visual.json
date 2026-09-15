@@ -253,23 +253,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "b6161e93d521168deb2d",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "cust"
-              }
-            },
-            "Property": "Phân khúc"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

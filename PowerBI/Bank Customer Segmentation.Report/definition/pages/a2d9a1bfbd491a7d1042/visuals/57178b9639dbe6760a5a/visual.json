@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
-  "name": "f775ae02a31676b61575",
+  "name": "57178b9639dbe6760a5a",
   "position": {
     "x": 45.227963525835868,
-    "y": 617.14285714285711,
-    "z": 19000,
+    "y": 421.64133738601822,
+    "z": 8000,
     "height": 97.750759878419458,
     "width": 192.58358662613981,
-    "tabOrder": 18000
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "slicer",
@@ -23,13 +23,13 @@
                       "Entity": "prod_holding"
                     }
                   },
-                  "Property": "Vay thế chấp (nhãn)"
+                  "Property": "Thẻ tín dụng (nhãn)"
                 }
               },
-              "queryRef": "prod_holding.Vay thế chấp (nhãn)",
-              "nativeQueryRef": "Vay thế chấp",
+              "queryRef": "prod_holding.Thẻ tín dụng (nhãn)",
+              "nativeQueryRef": "Thẻ tín dụng",
               "active": true,
-              "displayName": "Vay thế chấp"
+              "displayName": "Thẻ tín dụng"
             }
           ]
         }
@@ -144,7 +144,7 @@
       ]
     },
     "syncGroup": {
-      "groupName": "Vay thế chấp (nhãn)",
+      "groupName": "Thẻ tín dụng (nhãn)",
       "fieldChanges": true,
       "filterChanges": true
     },

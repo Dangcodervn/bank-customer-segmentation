@@ -143,24 +143,11 @@
         }
       ]
     },
+    "syncGroup": {
+      "groupName": "Tiền gửi có kỳ hạn (nhãn)",
+      "fieldChanges": true,
+      "filterChanges": true
+    },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "8acb2f22a200018e5e54",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "prod_holding"
-              }
-            },
-            "Property": "Tiền gửi có kỳ hạn (nhãn)"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

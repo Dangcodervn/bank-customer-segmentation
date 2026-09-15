@@ -465,37 +465,5 @@
         }
       ]
     }
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "89ade638576066a63e8a",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "cust"
-              }
-            },
-            "Property": "Phân khúc"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "15013aa7c5d9bc41038d",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "cust"
-              }
-            },
-            "Property": "Tổng số khách hàng"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }
