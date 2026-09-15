@@ -4,9 +4,9 @@
   "position": {
     "x": 293.25227963525833,
     "y": 141.51975683890578,
-    "z": 0,
-    "height": 475.62310030395139,
-    "width": 666.74772036474167,
+    "z": 1000,
+    "height": 671.12462006079022,
+    "width": 1607.7811550151976,
     "tabOrder": 0
   },
   "visual": {
@@ -255,7 +255,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "10D"
+                  "Value": "11D"
                 }
               }
             },
@@ -263,8 +263,9 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "Literal": {
-                      "Value": "'#334155'"
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": 0
                     }
                   }
                 }
@@ -281,8 +282,9 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "Literal": {
-                      "Value": "'#64748B'"
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0.2
                     }
                   }
                 }
@@ -305,6 +307,41 @@
                   }
                 }
               }
+            },
+            "axisStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "'showBoth'"
+                }
+              }
+            },
+            "titleFontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "titleBold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "titleFontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "11D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
             }
           }
         }
@@ -315,7 +352,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "10D"
+                  "Value": "11D"
                 }
               }
             },
@@ -323,8 +360,9 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "Literal": {
-                      "Value": "'#334155'"
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": 0
                     }
                   }
                 }
@@ -341,8 +379,9 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "Literal": {
-                      "Value": "'#64748B'"
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0.2
                     }
                   }
                 }
@@ -363,6 +402,34 @@
                       "Value": "'#C8C6C4'"
                     }
                   }
+                }
+              }
+            },
+            "titleFontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "titleBold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "titleFontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "11D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -383,6 +450,32 @@
               "expr": {
                 "Literal": {
                   "Value": "'Top'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "labelColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0.2
+                    }
+                  }
                 }
               }
             }
@@ -540,7 +633,21 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "13D"
+                  "Value": "14D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
                 }
               }
             }
@@ -591,21 +698,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "f18424ad6814199204d7",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "cust"
-              }
-            },
-            "Property": "Tỉnh thành"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "b6afaa50bccca3958b22",
+        "name": "09675675e4a305843cdc",
         "field": {
           "Column": {
             "Expression": {
@@ -619,7 +712,7 @@
         "type": "Categorical"
       },
       {
-        "name": "3892cc6d651a7a550518",
+        "name": "9372791cc8849076cd30",
         "field": {
           "Measure": {
             "Expression": {
@@ -633,7 +726,7 @@
         "type": "Advanced"
       },
       {
-        "name": "846ef579a75848a0cd93",
+        "name": "4f419ad451883eb87a7b",
         "field": {
           "Measure": {
             "Expression": {
@@ -647,7 +740,7 @@
         "type": "Advanced"
       },
       {
-        "name": "34ceec6c1877813e8a4a",
+        "name": "113c4223889509500c03",
         "field": {
           "Measure": {
             "Expression": {
@@ -659,6 +752,20 @@
           }
         },
         "type": "Advanced"
+      },
+      {
+        "name": "1929e2995b36d39184c5",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "cust"
+              }
+            },
+            "Property": "Tỉnh thành"
+          }
+        },
+        "type": "Categorical"
       }
     ]
   }

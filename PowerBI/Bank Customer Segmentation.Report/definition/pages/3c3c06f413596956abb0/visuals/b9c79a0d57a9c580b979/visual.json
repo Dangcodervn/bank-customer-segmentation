@@ -252,6 +252,11 @@
         }
       ]
     },
+    "syncGroup": {
+      "groupName": "Phân khúc",
+      "fieldChanges": true,
+      "filterChanges": true
+    },
     "drillFilterOtherVisuals": true
   }
 }

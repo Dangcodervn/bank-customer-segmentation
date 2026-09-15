@@ -3,9 +3,9 @@
   "name": "f847b882aba2bebb6b9c",
   "position": {
     "x": 293.25227963525833,
-    "y": 641.94528875379933,
-    "z": 1000,
-    "height": 220.30395136778114,
+    "y": 825.77507598784189,
+    "z": 2000,
+    "height": 234.89361702127658,
     "width": 1607.7811550151976,
     "tabOrder": 1000
   },
@@ -119,7 +119,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "11D"
+                  "Value": "13D"
                 }
               }
             },
@@ -162,7 +162,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "12D"
+                  "Value": "13D"
                 }
               }
             },
@@ -233,7 +233,7 @@
                   "expr": {
                     "ThemeDataColor": {
                       "ColorId": 1,
-                      "Percent": 0.2
+                      "Percent": 0
                     }
                   }
                 }
@@ -255,8 +255,9 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "Literal": {
-                      "Value": "'#FFFFFF'"
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
                     }
                   }
                 }
@@ -266,8 +267,9 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "Literal": {
-                      "Value": "'#FFFFFF'"
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
                     }
                   }
                 }
@@ -276,7 +278,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "12D"
+                  "Value": "13D"
                 }
               }
             }
@@ -480,7 +482,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "13D"
+                  "Value": "14D"
                 }
               }
             },
@@ -488,6 +490,20 @@
               "expr": {
                 "Literal": {
                   "Value": "'left'"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -534,56 +550,5 @@
         }
       ]
     }
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "24493fb6d85b9bd24e36",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Product Co-occurrence"
-              }
-            },
-            "Property": "Product B"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "2f12922c3d933ab0acc3",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Product Co-occurrence"
-              }
-            },
-            "Property": "Product A"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "a1e4105f14608718091a",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Product Co-occurrence"
-                  }
-                },
-                "Property": "Co-occurrence Count"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }
