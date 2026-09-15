@@ -101,5 +101,23 @@
       "filterChanges": true
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "8781aa230ac1eda53830",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "prod_holding"
+              }
+            },
+            "Property": "TK thanh toán (nhãn)"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

@@ -292,8 +292,18 @@
                   "expr": {
                     "FillRule": {
                       "Input": {
-                        "SelectRef": {
-                          "ExpressionName": "Sum(Product Co-occurrence.Co-occurrence Count)"
+                        "Aggregation": {
+                          "Expression": {
+                            "Column": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Product Co-occurrence"
+                                }
+                              },
+                              "Property": "Co-occurrence Count"
+                            }
+                          },
+                          "Function": 0
                         }
                       },
                       "FillRule": {
