@@ -16,39 +16,37 @@
 
 ## Project Overview
 
-Xuất phát điểm của project chỉ có 3 file CSV thô trong `Data/` và 1 bản brief đề bài trong `Docs/`. Toàn bộ phần còn lại (semantic model, report, thiết kế màu, README này) đều được xây dựng từ đó.
+Xuất phát điểm của project chỉ có 3 file CSV thô trong `Data/` và 1 bản brief đề bài trong `Docs/`. Toàn bộ phần còn lại (semantic model, report, thiết kế màu, README này) được xây dựng từ đó.
 
-Bài toán: chi nhánh có 113.066 khách hàng, chia 3 phân khúc (Gold/Silver/Regular) và 6 dòng sản phẩm. Ban giám đốc đặt mục tiêu **+20% doanh thu quý tới** nhưng chưa biết nên tập trung bán chéo sản phẩm nào, cho ai. Dashboard này biến 3 file CSV thành 1 semantic model DAX, trả lời trực tiếp câu hỏi đó qua 3 trang report, không chỉ báo cáo số liệu tổng quan.
+Đề bài yêu cầu một báo cáo cho giám đốc chi nhánh với mục tiêu tăng 20% doanh thu quý tới. Chi nhánh có 113.066 khách hàng, chia 3 phân khúc (Gold, Silver, Regular) và 6 dòng sản phẩm. Dashboard biến 3 file CSV thành một semantic model DAX và trả lời câu hỏi nên bán chéo sản phẩm nào, cho phân khúc nào, qua 3 trang report.
 
 Các câu hỏi project trả lời:
-- Phân khúc nào đang nắm nhiều tài sản (AUM) nhất, phân khúc nào đông nhất?
-- Sản phẩm nào hay được sở hữu cùng nhau (cross-sell)?
-- AUM có tương quan với số lượng sản phẩm sinh lãi khách hàng đang giữ không?
-- Khách hàng phân bổ ra sao theo tỉnh/thành?
+- Phân khúc nào đang nắm nhiều tài sản (AUM) nhất, phân khúc nào đông khách nhất? _(giám đốc chi nhánh)_
+- Sản phẩm nào hay được sở hữu cùng nhau? _(đội bán chéo)_
+- AUM có tương quan với số sản phẩm sinh lãi khách hàng đang giữ không? _(giám đốc chi nhánh)_
+- Khách hàng phân bổ ra sao theo tỉnh/thành? _(đội vận hành chi nhánh)_
 
 ## Table of Contents
 
 - [Project Overview](#project-overview)
 - [Project Highlights](#project-highlights)
 - [Repository Structure](#repository-structure)
-- [Dataset Snapshot](#dataset-snapshot)
+- [Raw Data](#raw-data)
 - [Data Pipeline](#data-pipeline)
 - [Semantic Model](#semantic-model)
 - [Dashboard](#dashboard)
 - [Key Findings](#key-findings)
 - [Tech Stack](#tech-stack)
-- [Limitations](#limitations)
-- [Future Improvements](#future-improvements)
 
 ## Project Highlights
 
 | Area | What this project does |
 | --- | --- |
-| Data prep | Power Query: chuẩn hoá kiểu dữ liệu, sửa giá trị "NA" trong cột thẻ tín dụng thành 0, đổi tên cột sang tiếng Việt, thêm cột Quốc gia cố định. |
-| Semantic model | 3 bảng khách hàng-grain (`cust`, `aum`, `prod_holding`) nối 1-1 qua `Mã KH`, hierarchy địa lý, 6 measure DAX, 6 cột nhãn Có/Không cho slicer. |
-| Cross-sell analysis | Bảng tính DAX `Product Co-occurrence`: đếm số khách hàng sở hữu đồng thời từng cặp sản phẩm, dựng thành heatmap. |
-| Correlation analysis | Scatter AUM trung bình/KH × số sản phẩm sinh lãi/phí, theo từng tỉnh × phân khúc, kiểm chứng giả thuyết "sản phẩm sinh lãi kéo theo tài sản". |
-| Dashboard | 3 trang Power BI (PBIR/PBIP), theme màu tự thiết kế theo Slate + Navy, header điều hướng, sidebar slicer cho từng trang. |
+| Data prep | Power Query: chuẩn hoá kiểu dữ liệu, thay "NA" thành 0 ở cột thẻ tín dụng, đổi tên cột sang tiếng Việt. |
+| Semantic model | 3 bảng cùng grain khách hàng nối 1-1 qua `Mã KH`, hierarchy địa lý, 6 measure DAX, 6 cột nhãn Có/Không cho slicer. |
+| Cross-sell analysis | Bảng tính DAX `Product Co-occurrence` đếm số khách hàng sở hữu đồng thời từng cặp sản phẩm, hiển thị dạng heatmap. |
+| Correlation analysis | Scatter AUM trung bình/KH × số sản phẩm sinh lãi theo từng tỉnh × phân khúc, kiểm tra xem tài sản có đi cùng độ sâu sản phẩm không. |
+| Dashboard | 3 trang Power BI, theme màu tự thiết kế (Navy, Gold, Regular tint), header điều hướng, sidebar slicer riêng cho từng trang. |
 
 ## Repository Structure
 
@@ -65,28 +63,46 @@ Bank Customer Segmentation/
 |   `-- Bank Customer Segmentation.pbip
 |-- Design/                                         # xây trong quá trình làm
 |   `-- dashboard-design.md                         # Color palette, layout, typography spec
-|-- screenshots/                                    # xây trong quá trình làm
+|-- Img/                                            # xây trong quá trình làm (ảnh chụp dashboard, sơ đồ model)
 `-- Report/                                         # xây trong quá trình làm (báo cáo insight docx/pdf)
 ```
 
-## Dataset Snapshot
+## Raw Data
 
-3 bảng gốc, đều 113.066 dòng, nối nhau qua `customer_id`:
+Dữ liệu gốc gồm 3 file CSV trong `Data/`, được commit lên Git cùng project.
 
-| File | Cột gốc | Ghi chú |
-| --- | --- | --- |
-| `cust.csv` | `customer_id`, `segment`, `province_city` | Phân khúc (Gold/Silver/Regular), 41 tỉnh/thành + nhóm "No Info" |
-| `aum.csv` | `customer_id`, `amount` | Tổng tài sản (AUM) của khách hàng |
-| `prod_holding.csv` | `customer_id`, `prod_ca`, `prod_td`, `prod_credit_card`, `prod_app`, `prod_secured_loan`, `prod_upl` | 6 cột cờ 0/1, tương ứng TK thanh toán, Tiền gửi có kỳ hạn, Thẻ tín dụng, App ngân hàng, Vay thế chấp, Vay tín chấp |
+| File | Số dòng |
+| --- | ---: |
+| `cust.csv` | 113.066 |
+| `aum.csv` | 113.066 |
+| `prod_holding.csv` | 113.066 |
+| **Tổng** | **339.198** |
 
-Vấn đề chất lượng dữ liệu phát hiện được: cột `prod_credit_card` chứa giá trị chuỗi "NA" thay vì số, phải xử lý bằng `Table.ReplaceValue` trước khi convert kiểu `Int64.Type`, nếu không refresh sẽ lỗi kiểu dữ liệu.
+Các cột có ý nghĩa:
+- `customer_id`: mã khách hàng, khoá nối 3 file
+- `segment`: phân khúc (Gold, Silver, Regular)
+- `province_city`: tỉnh/thành, gồm 41 giá trị và nhóm "No Info"
+- `amount`: tổng tài sản (AUM) của khách hàng
+- `prod_ca`: TK thanh toán (cờ 0/1)
+- `prod_td`: Tiền gửi có kỳ hạn (cờ 0/1)
+- `prod_credit_card`: Thẻ tín dụng (cờ 0/1)
+- `prod_app`: App ngân hàng (cờ 0/1)
+- `prod_secured_loan`: Vay thế chấp (cờ 0/1)
+- `prod_upl`: Vay tín chấp (cờ 0/1)
+
+**Xử lý dữ liệu chính trong Power Query:**
+- Đổi tên cột sang tiếng Việt (`customer_id` → `Mã KH`, `segment` → `Phân khúc`, `province_city` → `Tỉnh thành`, `amount` → `Tổng tài sản`).
+- Thêm cột `Quốc gia` với giá trị cố định "Việt Nam" để làm gốc cho hierarchy địa lý.
+- Thay chuỗi "NA" thành 0 ở cột `prod_credit_card` bằng `Table.ReplaceValue`, trước khi chuyển sang kiểu `Int64.Type`. Nếu bỏ bước này, refresh sẽ lỗi kiểu dữ liệu.
+
+Caveat dữ liệu: file không có cột ngày, nên đây là snapshot tại một thời điểm và không phân tích được xu hướng theo tháng hoặc quý. Nhóm "No Info" trong `province_city` không xác định được tỉnh nên không hiển thị trên bản đồ.
 
 ## Data Pipeline
 
 ```mermaid
 flowchart LR
-    A["3 file CSV<br/>cust · aum · prod_holding"] --> B["Power Query<br/>rename, NA→0, Int64.Type"]
-    B --> C["Semantic Model (TMDL)<br/>3 bảng gốc + hierarchy + measure"]
+    A["3 file CSV<br/>113.066 dòng mỗi file"] --> B["Power Query<br/>đổi tên, NA→0, Int64.Type"]
+    B --> C["Semantic Model (TMDL)<br/>3 bảng gốc · 6 measure"]
     C --> D["DAX calculated table<br/>Product Co-occurrence"]
     C --> E["Dashboard 3 trang<br/>Overview · Product analysis · Customer detail"]
     D --> E
@@ -94,60 +110,56 @@ flowchart LR
 
 ## Semantic Model
 
-Đây không phải star schema fact/dimension truyền thống. Mô hình thực tế là 3 bảng cùng grain khách hàng (`Mã KH` là khoá), nối quan hệ 1-1:
+![Semantic model](Img/semantic-model.png)
 
-- `cust`: Mã KH, Phân khúc, Tỉnh thành, Quốc gia, hierarchy Địa lý
-- `aum`: Mã KH, Tổng tài sản
-- `prod_holding`: Mã KH + 6 cột cờ sản phẩm (0/1) + 6 cột nhãn Có/Không cho slicer
+Mô hình gồm 3 bảng cùng grain khách hàng, nối quan hệ 1-1 qua `Mã KH`, không phải star schema fact/dimension:
 
-Từ `prod_holding`, DAX dựng thêm bảng tính `Product Co-occurrence` (Product A × Product B, số lượng đồng sở hữu) phục vụ heatmap cross-sell ở trang Product analysis.
+- `cust`: 1 dòng mỗi khách hàng, gồm Mã KH, Phân khúc, Tỉnh thành, Quốc gia và hierarchy Địa lý (Quốc gia > Tỉnh thành)
+- `aum`: 1 dòng mỗi khách hàng, gồm Mã KH và Tổng tài sản
+- `prod_holding`: 1 dòng mỗi khách hàng, gồm Mã KH, 6 cột cờ sản phẩm (0/1) và 6 cột nhãn Có/Không dùng cho slicer
 
-6 measure chính: `Tổng số khách hàng`, `% Tổng khách hàng`, `Tổng tài sản (AUM)`, `AUM trung bình/KH`, `Số sản phẩm TB/KH`, `Số SP sinh lãi/phí TB/KH` (loại trừ TK thanh toán và App ngân hàng, 2 sản phẩm nền tảng không trực tiếp sinh doanh thu).
+Model không có bảng ngày (date table), nên chưa hỗ trợ time intelligence. Lý do là dữ liệu chỉ có một snapshot.
+
+Có 6 measure, tất cả đều đang hiển thị trên dashboard. Ngoài ra có 1 bảng tính DAX `Product Co-occurrence` dựng từ `prod_holding`.
+
+**Các measure phức tạp nhất:**
+- `% Tổng khách hàng`: `DIVIDE` số khách của phân khúc với `CALCULATE` tổng khách bỏ lọc phân khúc bằng `ALL`, cho tỷ trọng mỗi phân khúc.
+- `Số SP sinh lãi/phí TB/KH`: `AVERAGEX` trên từng khách hàng, cộng 4 cờ sản phẩm sinh lãi, rồi lấy trung bình. Loại trừ TK thanh toán và App ngân hàng vì 2 sản phẩm này không trực tiếp sinh doanh thu.
+- `Product Co-occurrence`: bảng tính dùng `UNION` và `ROW` để tạo từng cặp sản phẩm, với số khách hàng sở hữu đồng thời cả hai.
 
 ## Dashboard
 
-**Overview**: 4 KPI card, AUM theo phân khúc, donut khách hàng, bản đồ AUM theo tỉnh/thành, bảng pivot sản phẩm, 8 slicer
-![Overview](screenshots/Overview.png)
+**1. Overview**: 4 KPI card, cột AUM theo phân khúc, donut số khách hàng, bản đồ AUM theo tỉnh/thành (định vị bằng tên tỉnh, nên toạ độ là gần đúng), bảng pivot sản phẩm và 8 slicer.
+![Overview](Img/Overview.png)
 
-**Product analysis**: scatter AUM × số sản phẩm sinh lãi, heatmap cross-sell, 6 slicer sản phẩm
-![Product analysis](screenshots/Product%20analysis.png)
+**2. Product analysis**: scatter AUM trung bình/KH × số sản phẩm sinh lãi (mỗi điểm là một tỉnh × phân khúc), heatmap cross-sell từ bảng `Product Co-occurrence`, và 6 slicer sản phẩm.
+![Product analysis](Img/Product%20analysis.png)
 
-**Customer detail**: bảng chi tiết khách hàng (drill-through), 7 slicer
-![Customer detail](screenshots/Customer%20detail.png)
+**3. Customer detail**: bảng chi tiết từng khách hàng (drill-through), kèm tổng AUM và số sản phẩm trung bình, và 7 slicer.
+![Customer detail](Img/Customer%20detail.png)
 
 ## Key Findings
 
-> **AUM (Assets Under Management)** = tổng tài sản khách hàng đang nắm giữ tại ngân hàng (đo bằng measure `Tổng tài sản (AUM)`, cộng dồn từ `aum.csv`).
+> **AUM (Assets Under Management)** = tổng tài sản khách hàng đang nắm giữ tại ngân hàng, cộng dồn từ `aum.csv`.
 >
-> **Độ sâu sản phẩm** = số sản phẩm trung bình mà 1 khách hàng đang sở hữu cùng lúc (đo bằng measure `Số SP sinh lãi/phí TB/KH`, tính trên 4 sản phẩm sinh lãi: Tiền gửi có kỳ hạn, Thẻ tín dụng, Vay thế chấp, Vay tín chấp). Ví dụ độ sâu = 0,23 nghĩa là trung bình cứ 100 khách hàng thì mới có 23 sản phẩm sinh lãi được sở hữu, tức phần lớn khách trong nhóm đó chưa có sản phẩm sinh lãi nào cả.
+> **Độ sâu sản phẩm** = số sản phẩm trung bình mà 1 khách hàng đang sở hữu cùng lúc, tính trên 4 sản phẩm sinh lãi (Tiền gửi có kỳ hạn, Thẻ tín dụng, Vay thế chấp, Vay tín chấp). Độ sâu 0,23 nghĩa là trung bình cứ 100 khách hàng mới có 23 sản phẩm sinh lãi, tức phần lớn khách chưa có sản phẩm sinh lãi nào.
 
 **Số liệu quan sát được:**
-- Lệch pha nghiêm trọng giữa số lượng và giá trị: Regular chiếm **80,6%** khách hàng nhưng chỉ nắm **858 tỷ** AUM (~**12%**); Gold chỉ **3,2%** khách hàng lại nắm **78%** tổng AUM.
-- Độ sâu sản phẩm chênh gần **5 lần** theo phân khúc: Gold trung bình **1,10** sản phẩm sinh lãi/phí, Regular chỉ **0,23**.
-- AUM tương quan dương với độ sâu sản phẩm trên scatter chart: khách càng giữ nhiều sản phẩm sinh lãi, AUM càng cao.
-- Silver là nhóm trung gian: AUM còn thấp ngang Regular nhưng độ sâu sản phẩm đã gần bằng Gold.
-- Trong 6 cặp có thể tạo ra từ 4 sản phẩm sinh lãi, cặp Tiền gửi có kỳ hạn + Thẻ tín dụng có **3.102** khách hàng sở hữu cả 2, cao vượt trội so với 5 cặp còn lại (chỉ **13** đến **185** khách).
-- Hà Nội và TP.HCM chiếm **65%** tổng số khách hàng Regular (**32.815** + **26.524** trên **91.166** khách). Riêng Đồng Nai có độ sâu sản phẩm chỉ **0,06**, thấp nhất trong các tỉnh đông khách, dù lượng khách không nhỏ (**1.460** người).
+- Regular chiếm **80,6%** khách hàng nhưng chỉ nắm **858 tỷ** AUM (khoảng **12%** tổng), trong khi Gold chỉ **3,2%** khách hàng nhưng nắm **78%** tổng AUM.
+- Độ sâu sản phẩm Gold là **1,10**, Silver là **0,75** và Regular chỉ **0,23**, tức Gold gấp gần **5 lần** Regular.
+- AUM tương quan dương với độ sâu sản phẩm trên scatter chart: khách giữ nhiều sản phẩm sinh lãi có AUM cao hơn.
+- Trong 6 cặp tạo ra từ 4 sản phẩm sinh lãi, cặp Tiền gửi có kỳ hạn + Thẻ tín dụng có **3.102** khách sở hữu cả hai, cao hơn hẳn 5 cặp còn lại (từ **13** đến **185** khách).
+- Hà Nội và TP.HCM chiếm **65%** khách hàng Regular (**32.815** + **26.524** trên **91.166** khách). Đồng Nai có độ sâu sản phẩm chỉ **0,06**, thấp nhất trong các tỉnh đông khách, dù có **1.460** khách.
 
-**Hướng giải quyết bài toán +20% doanh thu:**
-1. Ưu tiên Regular làm target chính cho chiến dịch cross-sell: nhóm volume lớn nhất và độ sâu sản phẩm thấp nhất, nên biên độ tăng trưởng khi dịch chuyển cũng lớn nhất.
-2. Chọn Thẻ tín dụng làm sản phẩm mở đầu cho khách đã có Tiền gửi có kỳ hạn (và ngược lại): đây là combo phổ biến nhất theo ma trận Cross-sell, tỷ lệ chấp nhận dự kiến cao hơn so với chào sản phẩm ngẫu nhiên.
-3. Với Silver, ưu tiên upsell tăng AUM (sản phẩm tiết kiệm/đầu tư giá trị cao) thay vì thêm sản phẩm mới: đòn bẩy hiệu quả hơn nằm ở tăng tài sản, không phải tăng số lượng sản phẩm.
-4. Ưu tiên Hà Nội và TP.HCM trước khi dàn trải toàn quốc: cùng một nguồn lực campaign, tập trung vào 2 địa bàn này tạo tác động lớn hơn nhiều so với chia đều cho 41 tỉnh/thành. Đồng Nai là địa bàn phụ đáng thử nghiệm cross-sell riêng.
+**Đề xuất hành động:**
+1. Ưu tiên Regular làm target chính cho chiến dịch cross-sell: nhóm này chiếm **80,6%** khách hàng nhưng độ sâu chỉ **0,23**, nên dư địa tăng là lớn nhất.
+2. Chào Thẻ tín dụng cho khách đã có Tiền gửi có kỳ hạn, và ngược lại: cặp này có **3.102** khách sở hữu cả hai, cao nhất trong 6 cặp.
+3. Với Silver, ưu tiên upsell tăng AUM thay vì thêm sản phẩm: nhóm này có độ sâu **0,75**, đã cao gấp **3** lần Regular, nên thêm sản phẩm không còn là điểm nghẽn bằng tài sản.
+4. Ưu tiên Hà Nội và TP.HCM trước khi dàn trải toàn quốc: 2 thành phố chiếm **65%** khách Regular, nên cùng một nguồn lực thì tập trung vào đây tạo tác động lớn hơn. Đồng Nai là địa bàn phụ nên thử cross-sell riêng vì độ sâu chỉ **0,06**.
 
 ## Tech Stack
 
-**Power BI Desktop** (Power Query M + DAX), không dùng thêm công cụ nào khác. Toàn bộ data prep, model quan hệ, và phân tích cross-sell/tương quan xử lý gọn trong DAX, không cần pipeline ETL hay database ngoài.
-
-## Limitations
-
-- Dữ liệu là 1 snapshot tại 1 thời điểm, không có chiều thời gian, chưa phân tích được xu hướng theo tháng/quý.
-- Toạ độ tỉnh/thành trên bản đồ là toạ độ trung tâm tỉnh (geocode gần đúng qua tên), không phải vị trí chi nhánh thật.
-- Một số dòng có Tỉnh thành = "No Info" (không xác định), không hiển thị trên bản đồ.
-- Model không có bảng ngày (date table) nên không hỗ trợ time intelligence.
-
-## Future Improvements
-
-- Bổ sung dữ liệu giao dịch theo thời gian để phân tích xu hướng và dự báo doanh thu.
-- Thêm drillthrough từ trang Overview sang Customer detail theo đúng khách hàng được click.
-- Tự động hoá refresh nếu triển khai lên Power BI Service (hiện đang refresh thủ công từ CSV local).
+- **Power BI Desktop**: xây semantic model, 3 trang report và toàn bộ slicer, bản đồ.
+- **Power Query (M)**: đổi tên cột, thay "NA" thành 0, chuyển kiểu dữ liệu cho 3 bảng gốc.
+- **DAX**: 6 measure và bảng tính `Product Co-occurrence`.
+- **Git / GitHub**: quản lý phiên bản repo và đẩy lên GitHub.
