@@ -144,22 +144,21 @@ Có 6 measure, tất cả đều đang hiển thị trên dashboard. Ngoài ra c
 >
 > **Độ sâu sản phẩm** = số sản phẩm trung bình mà 1 khách hàng đang sở hữu cùng lúc, tính trên 4 sản phẩm sinh lãi (Tiền gửi có kỳ hạn, Thẻ tín dụng, Vay thế chấp, Vay tín chấp). Độ sâu 0,23 nghĩa là trung bình cứ 100 khách hàng mới có 23 sản phẩm sinh lãi, tức phần lớn khách chưa có sản phẩm sinh lãi nào.
 
-**Số liệu quan sát được:**
-- Regular chiếm **80,6%** khách hàng nhưng chỉ nắm **858 tỷ** AUM (khoảng **12%** tổng), trong khi Gold chỉ **3,2%** khách hàng nhưng nắm **78%** tổng AUM.
-- Độ sâu sản phẩm Gold là **1,10**, Silver là **0,75** và Regular chỉ **0,23**, tức Gold gấp gần **5 lần** Regular.
-- AUM tương quan dương với độ sâu sản phẩm trên scatter chart: khách giữ nhiều sản phẩm sinh lãi có AUM cao hơn.
-- Trong 6 cặp tạo ra từ 4 sản phẩm sinh lãi, cặp Tiền gửi có kỳ hạn + Thẻ tín dụng có **3.102** khách sở hữu cả hai, cao hơn hẳn 5 cặp còn lại (từ **13** đến **185** khách).
-- Hà Nội và TP.HCM chiếm **65%** khách hàng Regular (**32.815** + **26.524** trên **91.166** khách). Đồng Nai có độ sâu sản phẩm chỉ **0,06**, thấp nhất trong các tỉnh đông khách, dù có **1.460** khách.
+**Insight từ dữ liệu:**
+- Nhóm đông khách nhất không mang lại phần lớn giá trị. Regular chiếm **80,6%** khách hàng nhưng chỉ nắm khoảng **12%** tổng AUM, trong khi Gold chỉ chiếm **3,2%** khách hàng nhưng nắm **78%** AUM.
+- Phần lớn khách Regular chưa có sản phẩm sinh lãi nào. Độ sâu sản phẩm của nhóm này chỉ **0,23**, trong khi Gold là **1,10**.
+- Khách giữ nhiều sản phẩm sinh lãi thường có tổng tài sản cao hơn. Trên scatter chart, các điểm có độ sâu cao hơn nằm bên phải, tức AUM cao hơn.
+- Silver đã quen với sản phẩm sinh lãi, độ sâu đạt **0,75**, nhưng tổng tài sản còn thấp, chỉ khoảng **10%** tổng AUM. Với nhóm này, vấn đề không nằm ở số lượng sản phẩm mà ở việc tài sản chưa được giữ lại tại ngân hàng.
+- Tiền gửi có kỳ hạn và Thẻ tín dụng là cặp sản phẩm khách hàng giữ cùng nhau nhiều nhất, với **3.102** khách có cả hai.
+- Khách Regular tập trung ở Hà Nội và TP.HCM, chiếm **65%** nhóm này. Đồng Nai lại đáng chú ý khi có nhiều khách nhưng độ sâu sản phẩm chỉ **0,06**, thấp hơn rõ rệt các tỉnh đông khách khác.
 
 **Đề xuất hành động:**
-1. Ưu tiên Regular làm target chính cho chiến dịch cross-sell: nhóm này chiếm **80,6%** khách hàng nhưng độ sâu chỉ **0,23**, nên dư địa tăng là lớn nhất.
-2. Chào Thẻ tín dụng cho khách đã có Tiền gửi có kỳ hạn, và ngược lại: cặp này có **3.102** khách sở hữu cả hai, cao nhất trong 6 cặp.
-3. Với Silver, ưu tiên upsell tăng AUM thay vì thêm sản phẩm: nhóm này có độ sâu **0,75**, đã cao gấp **3** lần Regular, nên thêm sản phẩm không còn là điểm nghẽn bằng tài sản.
-4. Ưu tiên Hà Nội và TP.HCM trước khi dàn trải toàn quốc: 2 thành phố chiếm **65%** khách Regular, nên cùng một nguồn lực thì tập trung vào đây tạo tác động lớn hơn. Đồng Nai là địa bàn phụ nên thử cross-sell riêng vì độ sâu chỉ **0,06**.
+1. Chọn Regular làm nhóm mục tiêu chính cho chiến dịch bán chéo sản phẩm sinh lãi, vì đây là nhóm còn nhiều khách chưa có sản phẩm nào để bán thêm.
+2. Khi khách đã có Tiền gửi có kỳ hạn nhưng chưa có Thẻ tín dụng, nên mời họ mở thẻ tín dụng, và ngược lại. Hai sản phẩm này hay đi cùng nhau nên đây là điểm bắt đầu hợp lý nhất.
+3. Với Silver, tập trung giữ và tăng tài sản bằng các sản phẩm tiết kiệm hoặc đầu tư giá trị cao, thay vì chỉ thêm sản phẩm mới, vì nhóm này đã quen dùng sản phẩm sinh lãi.
+4. Triển khai chiến dịch ở Hà Nội và TP.HCM trước, sau đó thử nghiệm riêng tại Đồng Nai, nơi có nhiều khách nhưng ít sản phẩm, để kiểm tra nguyên nhân trước khi mở rộng toàn quốc.
 
 ## Tech Stack
 
-- **Power BI Desktop**: xây semantic model, 3 trang report và toàn bộ slicer, bản đồ.
-- **Power Query (M)**: đổi tên cột, thay "NA" thành 0, chuyển kiểu dữ liệu cho 3 bảng gốc.
-- **DAX**: 6 measure và bảng tính `Product Co-occurrence`.
-- **Git / GitHub**: quản lý phiên bản repo và đẩy lên GitHub.
+- **Power BI Desktop**
+- **Git / GitHub**
